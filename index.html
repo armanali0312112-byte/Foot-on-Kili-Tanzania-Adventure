@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foot On Kili Tanzania Adventure & Safari</title>
+    <link href="img/logo-removebg-preview.png" rel="icon">
+</head>
+<body>
+    <header>
+        <style>
+            /* Use a clean modern font */
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+            :root{
+                --accent:#0077b6;
+                --muted:#f4f4f4;
+                --border:#e6e6e6;
+                --text:#222;
+            }
+
+            *{box-sizing:border-box}
+            header { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text) }
+
+            /* Topbar: contact left, social right */
+            .topbar {
+                background:var(--muted);
+                font-size:14px;
+                padding:8px 16px;
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                gap:16px;
+            }
+            .topbar .contact,
+            .topbar .social {
+                display:flex;
+                align-items:center;
+                gap:16px;
+            }
+            .topbar a { color:#333; text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:8px; }
+            .topbar a:hover { color:var(--accent) }
+
+            /* Social icon button styles */
+            .social a {
+                width:36px;
+                height:36px;
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:6px;
+                background:transparent;
+                transition: background .18s, transform .14s;
+                color:#333;
+            }
+            .social a:hover { background:rgba(0,0,0,0.04); transform:translateY(-2px); color:var(--accent) }
+            .social svg { width:18px; height:18px; display:block; }
+
+            /* Navbar container: add small left/right margins and enhanced visuals */
+            .navbar {
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                padding:14px 20px;
+                background:#fff;
+                border-bottom:1px solid var(--border);
+                margin:0 12px; /* small margin left/right as requested */
+                border-radius:6px;
+                box-shadow:0 6px 18px rgba(6,24,64,0.04);
+            }
+            .logo { display:flex; align-items:center; gap:12px; font-weight:700; font-size:18px; color:var(--text) }
+            .logo img { height:56px; width:auto; display:block; margin-left:6px; margin-right:6px; border-radius:6px; }
+
+            .nav-wrap { display:flex; align-items:center; gap:20px; }
+
+            .nav-toggle {
+                display:none;
+                background:none;
+                border:0;
+                font-size:22px;
+                cursor:pointer;
+                padding:6px;
+            }
+
+            .nav-menu {
+                list-style:none;
+                margin:0;
+                padding:0;
+                display:flex;
+                gap:14px;
+                align-items:center;
+                font-weight:600;
+            }
+            .nav-menu > li { position:relative; }
+            .nav-menu a, .nav-menu button {
+                text-decoration:none;
+                color:var(--text);
+                padding:8px 12px;
+                background:transparent;
+                border:0;
+                cursor:pointer;
+                font:inherit;
+                border-radius:6px;
+            }
+            .nav-menu a:hover, .nav-menu button:hover { background:rgba(0,0,0,0.04); color:var(--accent); }
+
+            /* Dropdown */
+            .dropdown-menu {
+                position:absolute;
+                top:calc(100% + 8px);
+                left:0;
+                background:#fff;
+                border:1px solid var(--border);
+                min-width:220px;
+                box-shadow:0 10px 30px rgba(6,24,64,0.08);
+                display:none;
+                z-index:20;
+                border-radius:8px;
+                overflow:hidden;
+            }
+            .dropdown-menu li { padding:0; }
+            .dropdown-menu a {
+                display:block;
+                padding:10px 12px;
+                color:#333;
+                font-weight:500;
+            }
+            .dropdown-menu a:hover { background:rgba(0,0,0,0.03); color:var(--accent); }
+            .nav-menu li:hover > .dropdown-menu { display:block; }
+
+            /* Responsive */
+            @media (max-width:800px){
+                .nav-toggle { display:block; }
+                .nav-menu {
+                    position:absolute;
+                    right:16px;
+                    top:76px;
+                    flex-direction:column;
+                    background:#fff;
+                    border:1px solid var(--border);
+                    display:none;
+                    width:240px;
+                    box-shadow:0 10px 30px rgba(6,24,64,0.08);
+                    border-radius:8px;
+                    overflow:hidden;
+                }
+                .nav-menu.show { display:flex; }
+                .nav-menu li:hover > .dropdown-menu { display:none; } /* disable hover dropdown on mobile */
+                .dropdown-menu { position:relative; border-top:1px solid #f0f0f0; display:none; }
+                .dropdown-menu.show { display:flex; flex-direction:column; }
+            }
+
+            /* Respect prefers-reduced-motion */
+            @media (prefers-reduced-motion: reduce) {
+                .nav-menu a, .nav-menu button, .topbar a { transition: none !important; }
+            }
+        </style>
+
+        <div class="topbar" aria-hidden="false">
+            <div class="contact" aria-label="Contact information">
+                <a href="tel:+255123456789" aria-label="Phone number">📞 +255 123 456 789</a>
+                <a href="mailto:info@footonkili.tz" aria-label="Email address">✉️ info@footonkili.tz</a>
+            </div>
+
+            <div class="social" aria-label="Social links">
+                <a href="#" aria-label="Facebook" title="Facebook">
+                    <!-- Facebook SVG -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.3c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.1h-1.07c-1.05 0-1.37.65-1.37 1.32v1.57h2.34l-.37 2.9h-1.97v7A10 10 0 0022 12z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram" title="Instagram">
+                    <!-- Instagram SVG -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.3a4.7 4.7 0 110 9.4 4.7 4.7 0 010-9.4zm0 2a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zM17.7 6.1a.9.9 0 11-1.8 0 .9.9 0 011.8 0z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                    <!-- LinkedIn SVG -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.001 5.001A2.5 2.5 0 014.98 3.5zM3 8.99h4v12H3v-12zM9 8.99h3.8v1.63h.06c.53-1 1.82-2.06 3.74-2.06 4 0 4.74 2.63 4.74 6.05v7.38h-4v-6.53c0-1.56-.03-3.57-2.17-3.57-2.17 0-2.5 1.7-2.5 3.45v6.65H9v-12z"/></svg>
+                </a>
+                <a href="#" aria-label="Twitter" title="Twitter">
+                    <!-- Twitter SVG -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.92c-.64.28-1.32.46-2.04.54a3.56 3.56 0 001.56-1.96 7.13 7.13 0 01-2.26.86 3.53 3.53 0 00-6.02 3.22A10 10 0 013 5.43a3.53 3.53 0 001.09 4.71 3.48 3.48 0 01-1.6-.44v.04a3.53 3.53 0 002.83 3.46c-.48.13-.98.16-1.5.06a3.54 3.54 0 003.3 2.46A7.07 7.07 0 013 19.54a9.98 9.98 0 005.41 1.59c6.49 0 10.04-5.37 10.04-10.03v-.46A7.2 7.2 0 0022 5.92z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="logo">
+                <!-- Replace src with your logo file -->
+                <img src="img/logo-removebg-preview.png" alt="Foot On Kili Logo">
+                
+            </div>
+
+            <div class="nav-wrap">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+
+                <ul id="main-menu" class="nav-menu" role="menubar">
+                    <li role="none"><a role="menuitem" href="#">Home</a></li>
+
+                    <li role="none">
+                        <button aria-haspopup="true" aria-expanded="false">About Us ▾</button>
+                        <ul class="dropdown-menu" role="menu" aria-label="About Us submenu">
+                            <li role="none"><a role="menuitem" href="#">Gallery</a></li>
+                            <li role="none"><a role="menuitem" href="#">Information</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none">
+                        <button aria-haspopup="true" aria-expanded="false">Major Tour ▾</button>
+                        <ul class="dropdown-menu" role="menu" aria-label="Major Tour submenu">
+                            <li role="none"><a role="menuitem" href="#">Kilimanjaro National Park</a></li>
+                            <li role="none"><a role="menuitem" href="#">Mountain Climbing</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none">
+                        <button aria-haspopup="true" aria-expanded="false">Itinerary ▾</button>
+                        <ul class="dropdown-menu" role="menu" aria-label="Itinerary submenu">
+                            <li role="none"><a role="menuitem" href="#">Moshi tour</a></li>
+                            <li role="none"><a role="menuitem" href="#">Marangel village tour</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none"><a role="menuitem" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            // Mobile toggle
+            (function(){
+                const toggle = document.querySelector('.nav-toggle');
+                const menu = document.getElementById('main-menu');
+                toggle && toggle.addEventListener('click', function(){
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', String(!expanded));
+                    menu.classList.toggle('show');
+                });
+
+                // Allow toggling submenu on small screens
+                const dropdownToggles = document.querySelectorAll('.nav-menu > li > button');
+                dropdownToggles.forEach(btn => {
+                    btn.addEventListener('click', function(e){
+                        if (window.innerWidth <= 800) {
+                            const submenu = this.nextElementSibling;
+                            submenu && submenu.classList.toggle('show');
+                            // Keep button aria-expanded accurate
+                            const expanded = this.getAttribute('aria-expanded') === 'true';
+                            this.setAttribute('aria-expanded', String(!expanded));
+                            e.preventDefault();
+                        }
+                    });
+                });
+            })();
+        </script>
+    </header></li></ul></li>
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster="poster.jpg" aria-hidden="true" tabindex="-1">
+            <!-- Provide both formats for broader browser support -->
+            <source src="background.webm" type="video/webm">
+            <source src="TANZANIA___ZANZIBAR_—_Is_a_dream_and_a_wish,_a_too-good-to-be-true_reality._🌿🤯__Zanzibar_makes_you_pinch_yourself_on_arrival_because_you’re_sure_no_.mp4" type="video/mp4">
+            <!-- Fallback image shown by poster attribute or when video isn't supported -->
+        </video>
+
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-content" role="banner">
+            <h1>Welcome to Foot On Kili Tanzania Adventure &amp; Safari</h1>
+            <p style="font-size: 20px;">10+ Years Experience | 100+ Tours Plans | One Window Travel </p>
+        </div>
+
+        <style>
+            .hero {
+                position: relative;
+                width: 100%;
+                height: 70vh;
+                min-height: 360px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                color: #fff;
+            }
+            .hero-video {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+                -o-object-fit: cover;
+            }
+            .hero-overlay {
+                position: absolute;
+                inset: 0;
+                /* subtle dark overlay for text legibility */
+                background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+                z-index: 1;
+            }
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                padding: 1rem;
+            }
+            .hero-content h1 {
+                margin: 0;
+                font-size: clamp(1.6rem, 4vw, 3rem);
+                line-height: 1.15;
+                font-weight: 700;
+                text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+            }
+
+            /* Respect prefers-reduced-motion: stop autoplay for users who reduced motion */
+            @media (prefers-reduced-motion: reduce) {
+                .hero-video { display: none; }
+                .hero-overlay { background: rgba(0,0,0,0.55); }
+            }
+
+            /* Smaller screens tweak */
+            @media (max-width: 600px) {
+                .hero { height: 56vh; min-height: 260px; }
+                .hero-content h1 { font-size: clamp(1.25rem, 6vw, 1.6rem); }
+            }
+        </style>
+
+        <script>
+            // If user prefers reduced motion, ensure video doesn't play
+            (function(){
+                var vid = document.querySelector('.hero-video');
+                if (!vid) return;
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    try { vid.pause(); } catch(e){}
+                }
+            })();
+        </script>
+    </section>
+    <section class="services" aria-label="Popular trip categories">
+        <style>
+            .services {
+                margin: 18px 12px;
+                padding: 18px;
+                background:#fff;
+                border:1px solid var(--border);
+                border-radius:8px;
+                box-shadow:0 8px 20px rgba(6,24,64,0.04);
+                
+            }
+            .services-grid{
+                display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+                gap:14px;
+                align-items:center;
+            }
+            .service {
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                gap:10px;
+                text-decoration:none;
+                color:var(--text);
+                padding:12px;
+                border-radius:10px;
+                transition: transform .14s ease, box-shadow .14s ease, color .14s ease;
+                background:transparent;
+                cursor:pointer;
+                user-select:none;
+            }
+            .service:hover, .service:focus {
+                transform:translateY(-6px);
+                color:var(--accent);
+                box-shadow:0 10px 30px rgba(6,24,64,0.06);
+                outline:none;
+            }
+            .service .icon{
+                width:56px;
+                height:56px;
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:10px;
+                background:var(--muted);
+                color:var(--accent);
+                flex:0 0 56px;
+            }
+            .service span {
+                font-weight:600;
+                font-size:14px;
+                text-align:center;
+                line-height:1.2;
+            }
+
+            @media (max-width:420px){
+                .service .icon{ width:48px; height:48px; flex:0 0 48px; }
+                .services { padding:12px; }
+            }
+        </style>
+
+        <div class="services-grid" role="list">
+            <a class="service" role="listitem" href="#" aria-label="Trending Trips">
+                <div class="icon" aria-hidden="true">
+                    <!-- simple trending/star icon -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+                        <path d="M12 .587l3.668 7.431L24 9.748l-6 5.847L19.335 24 12 20.202 4.665 24 6 15.595 0 9.748l8.332-1.73z"/>
+                    </svg>
+                </div>
+                <span>Trending Trips</span>
+            </a>
+
+            <a class="service" role="listitem" href="#" aria-label="Treks">
+                <div class="icon" aria-hidden="true">
+                    <!-- simple boot/trek icon -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+                        <path d="M2 21v-2a4 4 0 014-4h1v-3a3 3 0 013-3h6v3h2v6H2zM19 6a2 2 0 11-.001-4.001A2 2 0 0119 6z"/>
+                    </svg>
+                </div>
+                <span>Treks</span>
+            </a>
+
+            <a class="service" role="listitem" href="#" aria-label="Cultural and Heritage tours">
+                <div class="icon" aria-hidden="true">
+                    <!-- simple mask/culture icon -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+                        <path d="M12 2c3.86 0 7 3.582 7 8s-3.14 8-7 8-7-3.582-7-8 3.14-8 7-8zm-3 9a1 1 0 100-2 1 1 0 000 2zm6 0a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                </div>
+                <span>Cultural &amp; Heritage tours</span>
+            </a>
+
+            <a class="service" role="listitem" href="#" aria-label="Mountaineering expeditions">
+                <div class="icon" aria-hidden="true">
+                    <!-- simple mountain/climb icon -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+                        <path d="M2 20h20L12 4 2 20zm7-3l2-3 2 3h-4z"/>
+                    </svg>
+                </div>
+                <span>Mountaineering expeditions</span>
+            </a>
+
+            <a class="service" role="listitem" href="#" aria-label="Site Seeing">
+                <div class="icon" aria-hidden="true">
+                    <!-- simple binoculars/eye icon -->
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+                        <path d="M4 10c2-3 6-6 8-6s6 3 8 6c-2 3-6 6-8 6s-6-3-8-6zm2 0a2 2 0 104 0 2 2 0 00-4 0zm8 0a2 2 0 104 0 2 2 0 00-4 0zM2 18h20v2H2z"/>
+                    </svg>
+                </div>
+                <span>Site Seeing</span>
+            </a>
+        </div>
+    </section></svg></a></svg></a></div></section>
+    <section class="kili-section" aria-labelledby="kili-heading">
+        <style>
+            .kili-section { margin:18px 12px; padding:18px; background:#fff; border:1px solid #e6e6e6; border-radius:8px; box-shadow:0 8px 20px rgba(6,24,64,0.03); font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; }
+            .kili-section h2 { margin:0 0 6px; font-size:1.6rem; }
+            .kili-section h3 { margin:0 0 14px; font-size:1rem; color:#555; font-weight:600; }
+            .routes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+            .route-card { background:transparent; border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:10px; align-items:stretch; border:1px solid #f0f0f0; transition:transform .14s, box-shadow .14s; }
+            .route-card:hover { transform:translateY(-6px); box-shadow:0 10px 30px rgba(6,24,64,0.06); }
+            .route-card img { width:100%; height:140px; object-fit:cover; border-radius:8px; background:#eee; display:block; }
+            .route-title { margin:0; font-size:1.05rem; font-weight:700; }
+            .route-days { margin:0; color:#444; font-weight:600; }
+            .route-days small { display:block; font-weight:500; color:#777; font-size:0.9rem; margin-top:4px; }
+            .it-btn { margin-top:6px; align-self:flex-start; padding:8px 12px; border-radius:8px; border:0; background:var(--accent, #0077b6); color:#fff; cursor:pointer; font-weight:600; }
+            .it-btn[aria-expanded="true"] { background:#005f93; }
+            .itinerary { margin-top:10px; padding:10px; border-radius:8px; background:#fbfdff; border:1px solid #eef6fb; color:#123; font-size:0.95rem; }
+            .itinerary p { margin:6px 0; }
+            @media (max-width:420px){ .route-card img{ height:120px } }
+        </style>
+
+        <h2 id="kili-heading">Kilimanjaro climb</h2>
+        <h3>Routes to Kilimanjaro Climb</h3>
+
+        <div class="routes-grid" role="list">
+            <article class="route-card" role="listitem">
+                <img src="img/lemosho.jpg" alt="Lemosho route photo">
+                <h4 class="route-title">Lemosho route</h4>
+                <p class="route-days">7 days <small>6 days on request</small></p>
+                <button class="it-btn" data-target="it-lemosho" aria-expanded="false" aria-controls="it-lemosho">Itinerary</button>
+                <div id="it-lemosho" class="itinerary" hidden>
+                    <p><strong>Lemosho — 7 days (6 on request)</strong></p>
+                    <p>Day 1: Forest approach. Day 2: Moorland. Day 3: Shira Plateau. Day 4: Barranco/Barafu. Day 5: Summit attempt & descent to Mweka. Day 6: Mweka descent & transfer. Day 7: Buffer/travel day.</p>
+                </div>
+            </article>
+
+            <article class="route-card" role="listitem">
+                <img src="img/machame.jpg" alt="Machame route photo">
+                <h4 class="route-title">Machame route</h4>
+                <p class="route-days">8 days <small>7 days on request</small></p>
+                <button class="it-btn" data-target="it-machame" aria-expanded="false" aria-controls="it-machame">Itinerary</button>
+                <div id="it-machame" class="itinerary" hidden>
+                    <p><strong>Machame — 8 days (7 on request)</strong></p>
+                    <p>Day 1: Machame Gate to Machame Camp. Day 2: Shira Ridge. Day 3: Barranco. Day 4: Karanga. Day 5: Barafu. Day 6: Summit & descent to Mweka. Day 7: Mweka/arrival. Day 8: Buffer/travel day.</p>
+                </div>
+            </article>
+
+            <article class="route-card" role="listitem">
+                <img src="img/rongai.jpg" alt="Rongai route photo">
+                <h4 class="route-title">Rongai route</h4>
+                <p class="route-days">7 days <small>6 days on request</small></p>
+                <button class="it-btn" data-target="it-rongai" aria-expanded="false" aria-controls="it-rongai">Itinerary</button>
+                <div id="it-rongai" class="itinerary" hidden>
+                    <p><strong>Rongai — 7 days (6 on request)</strong></p>
+                    <p>Day 1: Rongai Gate to Simba Camp. Day 2: Kikelelwa. Day 3: Mawenzi Tarn. Day 4: Kibo/Hut. Day 5: Summit & descend to Horombo/Mweka. Day 6: Descent/transfer. Day 7: Buffer/travel day.</p>
+                </div>
+            </article>
+
+            <article class="route-card" role="listitem">
+                <img src="img/maramgu.jpg" alt="Marangu route photo">
+                <h4 class="route-title">Marangu route</h4>
+                <p class="route-days">6 days <small>5 days on request</small></p>
+                <button class="it-btn" data-target="it-marangu" aria-expanded="false" aria-controls="it-marangu">Itinerary</button>
+                <div id="it-marangu" class="itinerary" hidden>
+                    <p><strong>Marangu — 6 days (5 on request)</strong></p>
+                    <p>Day 1: Mandara Hut. Day 2: Horombo Hut. Day 3: Acclimatize/Rest. Day 4: Kibo Hut. Day 5: Summit & descend to Horombo. Day 6: Descent/transfer.</p>
+                </div>
+            </article>
+
+            <article class="route-card" role="listitem">
+                <img src="img/shira.jpg" alt="Shira route photo">
+                <h4 class="route-title">Shira route</h4>
+                <p class="route-days">7 days <small>6 days on request</small></p>
+                <button class="it-btn" data-target="it-shira" aria-expanded="false" aria-controls="it-shira">Itinerary</button>
+                <div id="it-shira" class="itinerary" hidden>
+                    <p><strong>Shira — 7 days (6 on request)</strong></p>
+                    <p>Day 1: Shira Plateau. Day 2: Moir Camp. Day 3: Lent Hill/Approach. Day 4: Barranco. Day 5: Karanga/Barafu. Day 6: Summit & descend. Day 7: Buffer/travel day.</p>
+                </div>
+            </article>
+
+            <article class="route-card" role="listitem">
+                <img src="img/umbwe.jpg" alt="Umbwe route photo">
+                <h4 class="route-title">Umbwe route</h4>
+                <p class="route-days">7 days <small>6 days on request</small></p>
+                <button class="it-btn" data-target="it-umbwe" aria-expanded="false" aria-controls="it-umbwe">Itinerary</button>
+                <div id="it-umbwe" class="itinerary" hidden>
+                    <p><strong>Umbwe — 7 days (6 on request)</strong></p>
+                    <p>Day 1: Umbwe Gate to Umbwe Cave. Day 2: Barranco. Day 3: Karanga. Day 4: Barafu. Day 5: Summit & descent. Day 6: Mweka/descent. Day 7: Buffer/travel day.</p>
+                </div>
+            </article>
+        </div>
+
+        <script>
+            (function(){
+                const buttons = document.querySelectorAll('.kili-section .it-btn');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', function(){
+                        const id = this.getAttribute('data-target');
+                        const panel = document.getElementById(id);
+                        if (!panel) return;
+                        const expanded = this.getAttribute('aria-expanded') === 'true';
+                        this.setAttribute('aria-expanded', String(!expanded));
+                        if (expanded) {
+                            panel.hidden = true;
+                        } else {
+                            panel.hidden = false;
+                            panel.focus && panel.focus();
+                        }
+                    });
+                });
+            })();
+        </script>
+    </section>
+    <section class="major-tours" aria-labelledby="major-tours-heading">
+        <style>
+            .major-tours { margin:18px 12px; padding:18px; background:#fff; border:1px solid #e6e6e6; border-radius:8px; box-shadow:0 8px 20px rgba(6,24,64,0.03); font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; }
+            .major-tours h2 { margin:0 0 8px; font-size:1.4rem; }
+            .tours-grid {
+                display:grid;
+                grid-template-columns:repeat(2,1fr); /* 2 per row */
+                gap:16px;
+                align-items:start;
+            }
+            .tour-card {
+                display:flex;
+                flex-direction:column;
+                gap:12px;
+                border-radius:10px;
+                overflow:hidden;
+                border:1px solid #f0f0f0;
+                background:transparent;
+                transition:transform .14s, box-shadow .14s;
+            }
+            .tour-card:hover { transform:translateY(-6px); box-shadow:0 10px 30px rgba(6,24,64,0.06); }
+            .tour-image {
+                width:100%;
+                height:326px; /* large space for image */
+                background:#e9eef6 center/cover no-repeat;
+                display:block;
+            }
+            .tour-body { padding:12px; display:flex; flex-direction:column; gap:8px; }
+            .tour-title { margin:0; font-size:1.05rem; font-weight:700; }
+            .tour-desc { margin:0; color:#555; font-size:0.95rem; }
+            .tour-actions { margin-top:auto; display:flex; gap:10px; align-items:center; }
+            .detail-btn {
+                padding:8px 12px;
+                border-radius:8px;
+                border:0;
+                background:#0077b6;
+                color:#fff;
+                font-weight:600;
+                cursor:pointer;
+            }
+            .detail-btn:hover, .detail-btn:focus { background:#005f93; outline:none; }
+            @media (max-width:760px) {
+                .tours-grid { grid-template-columns:1fr; }
+                .tour-image { height:180px; }
+            }
+        </style>
+
+        <h2 id="major-tours-heading">Major Tours</h2>
+        <p style="margin-top:6px; margin-bottom:14px; color:#444;">Explore our most popular tours. Click "Details" to open the dedicated tour page.</p>
+
+        <div class="tours-grid" role="list">
+            <article class="tour-card" role="listitem" aria-label="Zanzibar tour">
+                <img class="tour-image" src="img/zanzibar.jpg" alt="Zanzibar beach" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Zanzibar</h3>
+                    <p class="tour-desc">Beach paradise, spice tours and historic Stone Town.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="zanzibar.html" aria-label="Open Zanzibar details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Kilimanjaro National Park tour">
+                <img class="tour-image" src="img/kilimanjaro-national-park.jpg" alt="Kilimanjaro National Park landscape" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Kilimanjaro National Park</h3>
+                    <p class="tour-desc">Park highlights, wildlife and basecamp experiences.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="kilimanjaro-national-park.html" aria-label="Open Kilimanjaro National Park details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Mountain Climbing tour">
+                <img class="tour-image" src="img/mountain-climbing.jpg" alt="Mountain climbing" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Mountain Climbing</h3>
+                    <p class="tour-desc">Guided climbs, gear and acclimatization plans.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="mountain-climbing.html" aria-label="Open Mountain Climbing details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Tanzania Safari tour">
+                <img class="tour-image" src="img/tanzania-safari.jpg" alt="Tanzania safari" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Tanzania Safari</h3>
+                    <p class="tour-desc">Game drives, Serengeti, Ngorongoro and luxury camps.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="tanzania-safari.html" aria-label="Open Tanzania Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Old Mushi Cultural Tour">
+                <img class="tour-image" src="img/old-mushi-cultural-tour.jpg" alt="Old Mushi cultural tour" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Old Mushi Cultural Tour</h3>
+                    <p class="tour-desc">Local village visits, traditions and cultural activities.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="old-mushi-cultural-tour.html" aria-label="Open Old Mushi Cultural Tour details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Bike Kilimanjaro tour">
+                <img class="tour-image" src="img/bike-kilimanjaro.jpg" alt="Bike Kilimanjaro" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Bike Kilimanjaro</h3>
+                    <p class="tour-desc">Cycling routes around Kilimanjaro foothills and trails.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="bike-kilimanjaro.html" aria-label="Open Bike Kilimanjaro details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Kilimanjaro With Helicopter tour">
+                <img class="tour-image" src="img/kilimanjaro-with-helicopter.jpg" alt="Kilimanjaro helicopter" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Kilimanjaro With Helicopter</h3>
+                    <p class="tour-desc">Scenic helicopter transfers and aerial views of Kilimanjaro.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="kilimanjaro-with-helicopter.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <script>
+            (function(){
+                const buttons = document.querySelectorAll('.tour-detail');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', function(){
+                        const href = this.dataset.href;
+                        if (!href) return;
+                        // open the dedicated page (same tab)
+                        window.location.href = href;
+                    });
+                });
+            })();
+        </script>
+    </section></div></article></div>
+</body>
+</html>
