@@ -126,6 +126,11 @@
                 font-weight:500;
             }
             .dropdown-menu a:hover { background:rgba(0,0,0,0.03); color:var(--accent); }
+
+            /* Show dropdown when it has the .show class (used for click) */
+            .dropdown-menu.show { display:block; }
+
+            /* Keep hover behavior for desktop as a convenience */
             .nav-menu li:hover > .dropdown-menu { display:block; }
 
             /* Responsive */
@@ -158,16 +163,16 @@
 
         <div class="topbar" aria-hidden="false">
             <div class="contact" aria-label="Contact information">
-                <a href="tel:+255123456789" aria-label="Phone number">📞 +255 123 456 789</a>
-                <a href="mailto:info@footonkili.tz" aria-label="Email address">✉️ info@footonkili.tz</a>
+                <a href="tel:+255 767 691 910" aria-label="Phone number">📞 +255 767 691 910 </a>
+                <a href="mailto:info@footonkilitanzaniaadventure.com" aria-label="Email address">✉️ info@footonkilitanzaniaadventure.com</a>
             </div>
 
             <div class="social" aria-label="Social links">
-                <a href="#" aria-label="Facebook" title="Facebook">
+                <a href="https://m.facebook.com/footonkilitanzaniaadventure" aria-label="Facebook" title="Facebook">
                     <!-- Facebook SVG -->
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.3c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.1h-1.07c-1.05 0-1.37.65-1.37 1.32v1.57h2.34l-.37 2.9h-1.97v7A10 10 0 0022 12z"/></svg>
                 </a>
-                <a href="#" aria-label="Instagram" title="Instagram">
+                <a href="https://www.instagram.com/footonkilitanzania_adventures?igsh=emhnMGd0Zml5dDd0"" aria-label="Instagram" title="Instagram">
                     <!-- Instagram SVG -->
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.3a4.7 4.7 0 110 9.4 4.7 4.7 0 010-9.4zm0 2a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zM17.7 6.1a.9.9 0 11-1.8 0 .9.9 0 011.8 0z"/></svg>
                 </a>
@@ -175,7 +180,7 @@
                     <!-- LinkedIn SVG -->
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.001 5.001A2.5 2.5 0 014.98 3.5zM3 8.99h4v12H3v-12zM9 8.99h3.8v1.63h.06c.53-1 1.82-2.06 3.74-2.06 4 0 4.74 2.63 4.74 6.05v7.38h-4v-6.53c0-1.56-.03-3.57-2.17-3.57-2.17 0-2.5 1.7-2.5 3.45v6.65H9v-12z"/></svg>
                 </a>
-                <a href="#" aria-label="Twitter" title="Twitter">
+                <a href="https://x.com/footonkili360?t=EdhZIUL6MmzQMjEc57ZRxg&s=09" aria-label="Twitter" title="Twitter">
                     <!-- Twitter SVG -->
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.92c-.64.28-1.32.46-2.04.54a3.56 3.56 0 001.56-1.96 7.13 7.13 0 01-2.26.86 3.53 3.53 0 00-6.02 3.22A10 10 0 013 5.43a3.53 3.53 0 001.09 4.71 3.48 3.48 0 01-1.6-.44v.04a3.53 3.53 0 002.83 3.46c-.48.13-.98.16-1.5.06a3.54 3.54 0 003.3 2.46A7.07 7.07 0 013 19.54a9.98 9.98 0 005.41 1.59c6.49 0 10.04-5.37 10.04-10.03v-.46A7.2 7.2 0 0022 5.92z"/></svg>
                 </a>
@@ -193,65 +198,144 @@
                 <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
 
                 <ul id="main-menu" class="nav-menu" role="menubar">
-                    <li role="none"><a role="menuitem" href="#">Home</a></li>
+                    <li role="none"><a role="menuitem" href="index.html">Home</a></li>
 
                     <li role="none">
                         <button aria-haspopup="true" aria-expanded="false">About Us ▾</button>
                         <ul class="dropdown-menu" role="menu" aria-label="About Us submenu">
-                            <li role="none"><a role="menuitem" href="#">Gallery</a></li>
-                            <li role="none"><a role="menuitem" href="#">Information</a></li>
+                            <li role="none"><a role="menuitem" href="gallery.html">Gallery</a></li>
+                            <li role="none"><a role="menuitem" href="information.html">Information</a></li>
                         </ul>
                     </li>
 
                     <li role="none">
                         <button aria-haspopup="true" aria-expanded="false">Major Tour ▾</button>
                         <ul class="dropdown-menu" role="menu" aria-label="Major Tour submenu">
-                            <li role="none"><a role="menuitem" href="#">Kilimanjaro National Park</a></li>
-                            <li role="none"><a role="menuitem" href="#">Mountain Climbing</a></li>
-                        </ul>
+                            <li role="none"><a role="menuitem" href="kilimanjaro-national-park.html">Kilimanjaro National Park</a></li>
+                            <li role="none"><a role="menuitem" href="mountain-climbing.html">Mountain Climbing</a></li>
+                            <li role="none"><a role="menuitem" href="tanzania-safari.html">Tanzania Safari</a></li>
+                            <li role="none"><a role="menuitem" href="old-moshi-cultural.html">Old Moshi Cultural Tour</a></li>
+                            <li role="none"><a role="menuitem" href="bike-kilimanjaro.html">Bike Kilimanjaro</a></li>
+                            <li role="none"><a role="menuitem" href="zanzibar.html">Zanzibar</a></li>
+                            <li role="none"><a role="menuitem" href="kilimanjaro-helicopter.html">Kilimanjaro With Helicopter</a></li>
+                         </ul>
                     </li>
 
                     <li role="none">
                         <button aria-haspopup="true" aria-expanded="false">Itinerary ▾</button>
                         <ul class="dropdown-menu" role="menu" aria-label="Itinerary submenu">
-                            <li role="none"><a role="menuitem" href="#">Moshi tour</a></li>
-                            <li role="none"><a role="menuitem" href="#">Marangel village tour</a></li>
-                        </ul>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Moshi tour</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Marangel village tour</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Materuni Waterfalls</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Old Moshi Cultural Tour</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Moshi Tour With Bike</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Lake Chala</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Kikuletwa Hotsprings</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Olpopongi Maasai Cultural Village</a></li>
+                            <li role="none"><a role="menuitem" href="itenerary.html">Kilimanjaro Safari Group Joining</a></li>
+                         </ul>
                     </li>
 
-                    <li role="none"><a role="menuitem" href="#">Contact Us</a></li>
+                    <li role="none"><a role="menuitem" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
 
         <script>
-            // Mobile toggle
+            // Mobile toggle + dropdown click behavior for all viewports
             (function(){
                 const toggle = document.querySelector('.nav-toggle');
                 const menu = document.getElementById('main-menu');
+
                 toggle && toggle.addEventListener('click', function(){
                     const expanded = this.getAttribute('aria-expanded') === 'true';
                     this.setAttribute('aria-expanded', String(!expanded));
                     menu.classList.toggle('show');
                 });
 
-                // Allow toggling submenu on small screens
-                const dropdownToggles = document.querySelectorAll('.nav-menu > li > button');
-                dropdownToggles.forEach(btn => {
+                // Dropdown buttons (top-level)
+                const dropdownButtons = document.querySelectorAll('.nav-menu > li > button[aria-haspopup="true"]');
+
+                dropdownButtons.forEach(btn => {
+                    const submenu = btn.nextElementSibling;
+                    // Ensure proper ARIA initial state
+                    btn.setAttribute('aria-expanded', 'false');
+                    if (submenu) submenu.classList.remove('show');
+
                     btn.addEventListener('click', function(e){
-                        if (window.innerWidth <= 800) {
-                            const submenu = this.nextElementSibling;
-                            submenu && submenu.classList.toggle('show');
-                            // Keep button aria-expanded accurate
-                            const expanded = this.getAttribute('aria-expanded') === 'true';
-                            this.setAttribute('aria-expanded', String(!expanded));
-                            e.preventDefault();
+                        // Toggle submenu visibility on click for all screen sizes
+                        const isOpen = submenu && submenu.classList.contains('show');
+                        // Close any other open submenus first
+                        document.querySelectorAll('.dropdown-menu.show').forEach(open => {
+                            if (open !== submenu) {
+                                open.classList.remove('show');
+                                const b = open.previousElementSibling;
+                                if (b && b.getAttribute) b.setAttribute('aria-expanded', 'false');
+                            }
+                        });
+
+                        if (!submenu) return;
+                        if (isOpen) {
+                            submenu.classList.remove('show');
+                            btn.setAttribute('aria-expanded', 'false');
+                        } else {
+                            submenu.classList.add('show');
+                            btn.setAttribute('aria-expanded', 'true');
                         }
+
+                        // Prevent the click from bubbling to document (so outside-click handler doesn't immediately close it)
+                        e.stopPropagation();
+                    });
+                });
+
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function(e){
+                    // If click not inside nav-wrap, close all submenus
+                    const nav = document.querySelector('.nav-wrap');
+                    if (!nav) return;
+                    if (!nav.contains(e.target)) {
+                        document.querySelectorAll('.dropdown-menu.show').forEach(open => {
+                            open.classList.remove('show');
+                            const b = open.previousElementSibling;
+                            if (b && b.getAttribute) b.setAttribute('aria-expanded', 'false');
+                        });
+                        // Also hide mobile menu
+                        menu.classList.remove('show');
+                        const t = document.querySelector('.nav-toggle');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Close on escape key
+                document.addEventListener('keydown', function(e){
+                    if (e.key === 'Escape' || e.key === 'Esc') {
+                        document.querySelectorAll('.dropdown-menu.show').forEach(open => {
+                            open.classList.remove('show');
+                            const b = open.previousElementSibling;
+                            if (b && b.getAttribute) b.setAttribute('aria-expanded', 'false');
+                        });
+                        menu.classList.remove('show');
+                        const t = document.querySelector('.nav-toggle');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Close menus when a submenu link is clicked (useful for mobile)
+                document.querySelectorAll('.dropdown-menu a').forEach(a => {
+                    a.addEventListener('click', function(){
+                        document.querySelectorAll('.dropdown-menu.show').forEach(open => {
+                            open.classList.remove('show');
+                            const b = open.previousElementSibling;
+                            if (b && b.getAttribute) b.setAttribute('aria-expanded', 'false');
+                        });
+                        menu.classList.remove('show');
+                        const t = document.querySelector('.nav-toggle');
+                        if (t) t.setAttribute('aria-expanded', 'false');
                     });
                 });
             })();
         </script>
-    </header></li></ul></li>
+    </header>
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline poster="poster.jpg" aria-hidden="true" tabindex="-1">
             <!-- Provide both formats for broader browser support -->
@@ -264,7 +348,7 @@
 
         <div class="hero-content" role="banner">
             <h1>Welcome to Foot On Kili Tanzania Adventure &amp; Safari</h1>
-            <p style="font-size: 20px;">10+ Years Experience | 100+ Tours Plans | One Window Travel </p>
+            <p style="font-size: 20px;">20+ Years Experience | 100+ Tours Plans | One Window Travel </p>
         </div>
 
         <style>
@@ -336,6 +420,8 @@
     <section class="services" aria-label="Popular trip categories">
         <style>
             .services {
+                font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                font-size: 25px;
                 margin: 18px 12px;
                 padding: 18px;
                 background:#fff;
@@ -446,6 +532,45 @@
             </a>
         </div>
     </section></svg></a></svg></a></div></section>
+   <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Kilimanjaro Climb</h2>
     <section class="kili-section" aria-labelledby="kili-heading">
         <style>
             .kili-section { margin:18px 12px; padding:18px; background:#fff; border:1px solid #e6e6e6; border-radius:8px; box-shadow:0 8px 20px rgba(6,24,64,0.03); font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; }
@@ -473,7 +598,7 @@
                 <img src="img/lemosho.jpg" alt="Lemosho route photo">
                 <h4 class="route-title">Lemosho route</h4>
                 <p class="route-days">7 days <small>6 days on request</small></p>
-                <button class="it-btn" data-target="it-lemosho" aria-expanded="false" aria-controls="it-lemosho">Itinerary</button>
+                <button class="detail-btn tour-detail" data-href="route-itenerary.html" aria-label="Open lemosho details">Itenerary</button>
                 <div id="it-lemosho" class="itinerary" hidden>
                     <p><strong>Lemosho — 7 days (6 on request)</strong></p>
                     <p>Day 1: Forest approach. Day 2: Moorland. Day 3: Shira Plateau. Day 4: Barranco/Barafu. Day 5: Summit attempt & descent to Mweka. Day 6: Mweka descent & transfer. Day 7: Buffer/travel day.</p>
@@ -484,7 +609,7 @@
                 <img src="img/machame.jpg" alt="Machame route photo">
                 <h4 class="route-title">Machame route</h4>
                 <p class="route-days">8 days <small>7 days on request</small></p>
-                <button class="it-btn" data-target="it-machame" aria-expanded="false" aria-controls="it-machame">Itinerary</button>
+                 <button class="detail-btn tour-detail" data-href="route-itenerary.html" aria-label="Open Machame details">Itenerary</button>
                 <div id="it-machame" class="itinerary" hidden>
                     <p><strong>Machame — 8 days (7 on request)</strong></p>
                     <p>Day 1: Machame Gate to Machame Camp. Day 2: Shira Ridge. Day 3: Barranco. Day 4: Karanga. Day 5: Barafu. Day 6: Summit & descent to Mweka. Day 7: Mweka/arrival. Day 8: Buffer/travel day.</p>
@@ -495,7 +620,7 @@
                 <img src="img/rongai.jpg" alt="Rongai route photo">
                 <h4 class="route-title">Rongai route</h4>
                 <p class="route-days">7 days <small>6 days on request</small></p>
-                <button class="it-btn" data-target="it-rongai" aria-expanded="false" aria-controls="it-rongai">Itinerary</button>
+                <button class="detail-btn tour-detail" data-href="route-itenerary.html" aria-label="Open Rongai details">Itenerary</button>
                 <div id="it-rongai" class="itinerary" hidden>
                     <p><strong>Rongai — 7 days (6 on request)</strong></p>
                     <p>Day 1: Rongai Gate to Simba Camp. Day 2: Kikelelwa. Day 3: Mawenzi Tarn. Day 4: Kibo/Hut. Day 5: Summit & descend to Horombo/Mweka. Day 6: Descent/transfer. Day 7: Buffer/travel day.</p>
@@ -506,7 +631,7 @@
                 <img src="img/maramgu.jpg" alt="Marangu route photo">
                 <h4 class="route-title">Marangu route</h4>
                 <p class="route-days">6 days <small>5 days on request</small></p>
-                <button class="it-btn" data-target="it-marangu" aria-expanded="false" aria-controls="it-marangu">Itinerary</button>
+                <button class="detail-btn tour-detail" data-href="route-itenerary.html" aria-label="Marangu details">Itenerary</button>
                 <div id="it-marangu" class="itinerary" hidden>
                     <p><strong>Marangu — 6 days (5 on request)</strong></p>
                     <p>Day 1: Mandara Hut. Day 2: Horombo Hut. Day 3: Acclimatize/Rest. Day 4: Kibo Hut. Day 5: Summit & descend to Horombo. Day 6: Descent/transfer.</p>
@@ -517,7 +642,7 @@
                 <img src="img/shira.jpg" alt="Shira route photo">
                 <h4 class="route-title">Shira route</h4>
                 <p class="route-days">7 days <small>6 days on request</small></p>
-                <button class="it-btn" data-target="it-shira" aria-expanded="false" aria-controls="it-shira">Itinerary</button>
+                 <button class="detail-btn tour-detail" data-href="route-itenerary.html" aria-label="Open Shira details">Itenerary</button>
                 <div id="it-shira" class="itinerary" hidden>
                     <p><strong>Shira — 7 days (6 on request)</strong></p>
                     <p>Day 1: Shira Plateau. Day 2: Moir Camp. Day 3: Lent Hill/Approach. Day 4: Barranco. Day 5: Karanga/Barafu. Day 6: Summit & descend. Day 7: Buffer/travel day.</p>
@@ -528,7 +653,7 @@
                 <img src="img/umbwe.jpg" alt="Umbwe route photo">
                 <h4 class="route-title">Umbwe route</h4>
                 <p class="route-days">7 days <small>6 days on request</small></p>
-                <button class="it-btn" data-target="it-umbwe" aria-expanded="false" aria-controls="it-umbwe">Itinerary</button>
+                <button class="detail-btn tour-detail" data-href="route-itenerary.html" aria-label="Open Umbwe details">Itenerary</button>
                 <div id="it-umbwe" class="itinerary" hidden>
                     <p><strong>Umbwe — 7 days (6 on request)</strong></p>
                     <p>Day 1: Umbwe Gate to Umbwe Cave. Day 2: Barranco. Day 3: Karanga. Day 4: Barafu. Day 5: Summit & descent. Day 6: Mweka/descent. Day 7: Buffer/travel day.</p>
@@ -557,6 +682,45 @@
             })();
         </script>
     </section>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Major Tours</h2>
     <section class="major-tours" aria-labelledby="major-tours-heading">
         <style>
             .major-tours { margin:18px 12px; padding:18px; background:#fff; border:1px solid #e6e6e6; border-radius:8px; box-shadow:0 8px 20px rgba(6,24,64,0.03); font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; }
@@ -603,6 +767,7 @@
                 .tour-image { height:180px; }
             }
         </style>
+        
 
         <h2 id="major-tours-heading">Major Tours</h2>
         <p style="margin-top:6px; margin-bottom:14px; color:#444;">Explore our most popular tours. Click "Details" to open the dedicated tour page.</p>
@@ -700,5 +865,322 @@
             })();
         </script>
     </section></div></article></div>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Safari Packages</h2>
+    <section class="safari-section" aria-labelledby="safari-heading">
+        <style>
+            .safari-section { margin:18px 12px; padding:18px; background:#fff; border:1px solid #e6e6e6; border-radius:8px; box-shadow:0 8px 20px rgba(6,24,64,0.03); font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; }
+            .safari-section h2 { margin:0 0 8px; font-size:1.4rem; }
+            .safari-grid {
+                display:grid;
+                grid-template-columns:repeat(2,1fr); /* two per row */
+                gap:16px;
+                align-items:start;
+            }
+            .safari-card {
+                display:flex;
+                flex-direction:column;
+                gap:10px;
+                border-radius:10px;
+                overflow:hidden;
+                border:1px solid #f0f0f0;
+                background:transparent;
+                transition:transform .14s, box-shadow .14s;
+            }
+            .safari-card:hover { transform:translateY(-6px); box-shadow:0 10px 30px rgba(6,24,64,0.06); }
+            .safari-image { width:100%; height:200px; object-fit:cover; display:block; background:#e9eef6 center/cover no-repeat; }
+            .safari-body { padding:12px; display:flex; flex-direction:column; gap:8px; }
+            .safari-title { margin:0; font-size:1.05rem; font-weight:700; }
+            .safari-desc { margin:0; color:#555; font-size:0.95rem; }
+            .safari-actions { margin-top:auto; display:flex; gap:10px; align-items:center; }
+            .detail-btn {
+                padding:8px 12px;
+                border-radius:8px;
+                border:0;
+                background:#0077b6;
+                color:#fff;
+                font-weight:600;
+                cursor:pointer;
+            }
+            .detail-btn:hover, .detail-btn:focus { background:#005f93; outline:none; }
+            @media (max-width:760px) { .safari-grid { grid-template-columns:1fr; } .safari-image { height:160px; } }
+        </style>
+
+        <h2 id="safari-heading">Safari Packages</h2>
+        <p style="margin-top:6px; margin-bottom:14px; color:#444;">Choose from our curated safari itineraries. Click "Details" to open each package page.</p>
+
+        <div class="safari-grid" role="list">
+            <article class="safari-card" role="listitem" aria-label="2 days Safari">
+                <img class="safari-image" src="img/safari-2days.jpg" alt="2 days safari wildlife" />
+                <div class="safari-body">
+                    <h3 class="safari-title">2 days Safari</h3>
+                    <p class="safari-desc">Short weekend safari — ideal for limited time visitors. Game drives and lodge stay.</p>
+                    <div class="safari-actions">
+                        <button class="detail-btn safari-detail" data-href="safari-2-days.html" aria-label="Open 2 days Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="safari-card" role="listitem" aria-label="3 days Safari">
+                <img class="safari-image" src="img/safari-3days.jpg" alt="3 days safari landscape" />
+                <div class="safari-body">
+                    <h3 class="safari-title">3 days Safari</h3>
+                    <p class="safari-desc">Extended weekend safari with full-day game drives and cultural visit.</p>
+                    <div class="safari-actions">
+                        <button class="detail-btn safari-detail" data-href="safari-3-days.html" aria-label="Open 3 days Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="safari-card" role="listitem" aria-label="4 days Safari">
+                <img class="safari-image" src="img/safari-4days.jpg" alt="4 days safari open plains" />
+                <div class="safari-body">
+                    <h3 class="safari-title">4 days Safari</h3>
+                    <p class="safari-desc">Four-day itinerary covering prime parks and game-viewing routes.</p>
+                    <div class="safari-actions">
+                        <button class="detail-btn safari-detail" data-href="safari-4-days.html" aria-label="Open 4 days Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="safari-card" role="listitem" aria-label="5 days Safari">
+                <img class="safari-image" src="img/safari-5days.jpg" alt="5 days safari wildlife scene" />
+                <div class="safari-body">
+                    <h3 class="safari-title">5 days Safari</h3>
+                    <p class="safari-desc">Five days of immersive wildlife experience with guided game drives and lodge stays.</p>
+                    <div class="safari-actions">
+                        <button class="detail-btn safari-detail" data-href="safari-5-days.html" aria-label="Open 5 days Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="safari-card" role="listitem" aria-label="7 days Safari">
+                <img class="safari-image" src="img/safari-7days.jpg" alt="7 days safari scenic view" />
+                <div class="safari-body">
+                    <h3 class="safari-title">7 days Safari</h3>
+                    <p class="safari-desc">Week-long safari for a thorough exploration of multiple parks and landscapes.</p>
+                    <div class="safari-actions">
+                        <button class="detail-btn safari-detail" data-href="safari-7-days.html" aria-label="Open 7 days Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="safari-card" role="listitem" aria-label="9 days Safari">
+                <img class="safari-image" src="img/safari-9days.jpg" alt="9 days safari river scene" />
+                <div class="safari-body">
+                    <h3 class="safari-title">9 days Safari</h3>
+                    <p class="safari-desc">Nine-day premium safari combining major parks, cultural visits and relaxation.</p>
+                    <div class="safari-actions">
+                        <button class="detail-btn safari-detail" data-href="safari-9-days.html" aria-label="Open 9 days Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="safari-card" role="listitem" aria-label="12 days Safari">
+                <img class="safari-image" src="img/safari-12days.jpg" alt="12 days safari panoramic view" />
+                <div class="safari-body">
+                    <h3 class="safari-title">12 days Safari</h3>
+                    <p class="safari-desc">Comprehensive 12-day expedition visiting remote parks and luxury camps.</p>
+                    <div class="safari-actions">
+                        <button class="detail-btn safari-detail" data-href="safari-12-days.html" aria-label="Open 12 days Safari details">Details</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <script>
+            (function(){
+                const buttons = document.querySelectorAll('.safari-detail');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', function(){
+                        const href = this.dataset.href;
+                        if (!href) return;
+                        window.location.href = href;
+                    });
+                });
+            })();
+        </script>
+    </section></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div>
+    <footer class="site-footer" role="contentinfo" aria-label="Footer">
+        <style>
+            .site-footer {
+                --accent: #0077b6;
+                background:rgb(28, 28, 28);
+                border-top:1px solid var(--border, #e6e6e6);
+                margin:18px 12px 36px;
+                padding:22px;
+                border-radius:10px;
+                box-shadow:0 8px 20px rgba(6,24,64,0.03);
+                font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                color:white;
+            }
+            .footer-grid {
+                display:grid;
+                grid-template-columns: 260px 1fr 1fr 260px;
+                gap:18px;
+                align-items:start;
+            }
+            .footer-brand { display:flex; gap:12px; align-items:center; }
+            .footer-brand img { height:56px; width:auto; border-radius:6px; display:block; }
+            .footer-social { display:flex; gap:8px; margin-top:6px; }
+            .footer-social a {
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                width:40px;
+                height:40px;
+                border-radius:8px;
+                background:transparent;
+                color:white;
+                transition:background .15s, transform .12s;
+                text-decoration:none;
+            }
+            .footer-social a:hover { background:rgba(0,0,0,0.04); transform:translateY(-3px); color:var(--accent); }
+            .footer-col h4 { margin:0 0 8px; font-size:25px; color: white; }
+            .footer-links, .footer-tours { list-style:square; margin:0; padding:0; display:grid; gap:6px; }
+            .footer-links a, .footer-tours a {
+                color:white;
+                text-decoration:none;
+                padding:6px 8px;
+                border-radius:6px;
+                display:inline-block;
+                font-weight:600;
+            }
+            .footer-links a:hover, .footer-tours a:hover { color:var(--accent); background:rgba(0,119,182,0.04); }
+            .footer-contact p { margin:6px 0; font-weight:600; color:rgb(255, 255, 255); }
+            .footer-contact a { color:white; text-decoration:none; display:inline-block; margin-top:4px; }
+            .footer-bottom {
+                margin-top:18px;
+                padding-top:12px;
+                border-top:1px solid #f0f0f0;
+                display:flex;
+                flex-direction:column;
+                gap:8px;
+                align-items:center;
+                justify-content:space-between;
+            }
+            .footer-bottom .legal { font-size:0.92rem; color:white; }
+            .footer-bottom .legal a { font-size:0.92rem; color:orange; }
+            
+            @media (max-width:880px){
+                .footer-grid { grid-template-columns:1fr 1fr; }
+                .footer-brand { grid-column: span 2; }
+            }
+            @media (max-width:520px){
+                .footer-grid { grid-template-columns:1fr; }
+                .footer-brand { justify-content:flex-start; }
+                .footer-bottom { text-align:center; }
+            }
+        </style>
+
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand" aria-label="Company">
+                    <img src="img/logo-removebg-preview.png" alt="Foot On Kili logo" >
+                    <div>
+                        <strong>Foot On Kili Tanzania Adventure & Safari</strong>
+                        <div style="font-size:0.95rem;color:white;margin-top:6px;">Tanzania Adventure &amp; Safari</div>
+                        <div class="footer-social" aria-label="Social links">
+                            <a href="https://m.facebook.com/footonkilitanzaniaadventure" aria-label="Facebook" title="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.3c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.1h-1.07c-1.05 0-1.37.65-1.37 1.32v1.57h2.34l-.37 2.9h-1.97v7A10 10 0 0022 12z"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/footonkilitanzania_adventures?igsh=emhnMGd0Zml5dDd0"" aria-label="Instagram" title="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.3a4.7 4.7 0 110 9.4 4.7 4.7 0 010-9.4zm0 2a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zM17.7 6.1a.9.9 0 11-1.8 0 .9.9 0 011.8 0z"/></svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.001 5.001A2.5 2.5 0 014.98 3.5zM3 8.99h4v12H3v-12zM9 8.99h3.8v1.63h.06c.53-1 1.82-2.06 3.74-2.06 4 0 4.74 2.63 4.74 6.05v7.38h-4v-6.53c0-1.56-.03-3.57-2.17-3.57-2.17 0-2.5 1.7-2.5 3.45v6.65H9v-12z"/></svg>
+                            </a>
+                            <a href="https://x.com/footonkili360?t=EdhZIUL6MmzQMjEc57ZRxg&s=09" aria-label="Twitter" title="Twitter">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M22 5.92c-.64.28-1.32.46-2.04.54a3.56 3.56 0 001.56-1.96 7.13 7.13 0 01-2.26.86 3.53 3.53 0 00-6.02 3.22A10 10 0 013 5.43a3.53 3.53 0 001.09 4.71 3.48 3.48 0 01-1.6-.44v.04a3.53 3.53 0 002.83 3.46c-.48.13-.98.16-1.5.06a3.54 3.54 0 003.3 2.46A7.07 7.07 0 013 19.54a9.98 9.98 0 005.41 1.59c6.49 0 10.04-5.37 10.04-10.03v-.46A7.2 7.2 0 0022 5.92z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Useful links</h4>
+                <ul class="footer-links" aria-label="Useful links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" aria-label="About Us page">About Us</a></li>
+                    <li><a href="#" aria-label="Information page">Information</a></li>
+                    <li><a href="#" aria-label="Gallery page">Gallery</a></li>
+                    <li><a href="#" aria-label="Contact page">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Major Tours</h4>
+                <ul class="footer-tours" aria-label="Major tours">
+                    <li><a href="zanzibar.html">Zanzibar</a></li>
+                    <li><a href="kilimanjaro-national-park.html">Kilimanjaro National Park</a></li>
+                    <li><a href="mountain-climbing.html">Mountain Climbing</a></li>
+                    <li><a href="tanzania-safari.html">Tanzania Safari</a></li>
+                    <li><a href="old-moshi-cultural.html">Cultural tour</a></li>
+                    <li><a href="bike-kilimanjaro.html">Bike Kilimanjaro</a></li>
+                    <li><a href="kilimanjaro-helicopter.html">Kilimanjaro With Helicopter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact" aria-label="Contact information">
+                <h4>Contact Us</h4>
+                <p>Foot On Kili</p>
+                <p style="font-weight:500;color:white;font-size:0.95rem;">Address: Taifa Road, CCM Building Moshi, Tanzania</p>
+                <p>Phone: <a href="tel:+255 767 691 910">+255 767 691 910</a></p>
+                <p>Email: <a href="mailto:info@footonkilitanzaniaadventure.com">info@footonkilitanzaniaadventure.com</a></p>
+                <div style="margin-top:10px;color:white;font-size:0.95rem;"></div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="legal" aria-hidden="false">
+                Copyright <span id="copyright-year"></span> &copy; <a href="index.html">Foot On Kili Tanzania Adventure & Safari</a> All rights reserved.
+            </div>
+        </div>
+
+        <script>
+            (function(){
+                var el = document.getElementById('copyright-year');
+                if (el) el.textContent = new Date().getFullYear();
+            })();
+        </script>
+    </footer></a>
 </body>
 </html>
