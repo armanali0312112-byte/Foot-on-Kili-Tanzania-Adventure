@@ -18,6 +18,9 @@
                 --border:#e6e6e6;
                 --text:#222;
             }
+            body{
+                font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            }
 
             *{box-sizing:border-box}
             header { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text) }
@@ -336,88 +339,672 @@
             })();
         </script>
     </header>
-    <section></section>
-<main style="font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #222; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-  
-  <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 40px; text-align: center;">Information</h1>
+     <section class="zanzibar-section" aria-label="Zanzibar hero and details">
+        <style>
+            /* Slider */
+            .zanzibar-section { margin:20px 12px 60px; font-family:inherit; }
+            .slider {
+                position:relative;
+                height:420px;
+                border-radius:10px;
+                overflow:hidden;
+                background:#000;
+                box-shadow:0 8px 30px rgba(6,24,64,0.06);
+            }
+            .slide {
+                position:absolute;
+                inset:0;
+                background-size:cover;
+                background-position:center;
+                opacity:0;
+                transform:scale(1.02);
+                transition:opacity .6s ease, transform .6s ease;
+            }
+            .slide.active { opacity:1; transform:scale(1); }
+            .slider .overlay {
+                position:absolute;
+                inset:0;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                pointer-events:none;
+            }
+            .slider-title {
+                color:#fff;
+                font-size:48px;
+                font-weight:700;
+                text-shadow:0 6px 18px rgba(0,0,0,0.5);
+                background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15));
+                padding:12px 22px;
+                border-radius:8px;
+                letter-spacing:0.6px;
+            }
 
-  <!-- Tanzania Travel Guide -->
-  <article style="display: flex; gap: 30px; margin-bottom: 60px; align-items: center;">
-    <div style="flex: 1;">
-      <img src="img/travel-guide.jpg" alt="Tanzania Travel Guide" style="width: 100%; border-radius: 8px; object-fit: cover; height: 300px;">
-    </div>
-    <div style="flex: 1;">
-      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Tanzania Travel Guide</h2>
-      <p style="line-height: 1.6; margin-bottom: 12px;">The main international road crossings into Tanzania are from Kenya. The most used is the border crossing at Namanga, about halfway between Nairobi and Arusha. The other principle border crossing is south of Mombasa on the coast at Lunga Lunga, from where the nearest large Tanzanian town is Tanga. There are quieter border crossings at Taveta, between Voi and Moshi, and Isebania on the main road between Kisumu and Mwanza.</p>
-    </div>
-  </article>
+            /* Prev/Next */
+            .slider .ctrl {
+                position:absolute;
+                top:50%;
+                transform:translateY(-50%);
+                background:rgba(255,255,255,0.92);
+                border:0;
+                width:44px;
+                height:44px;
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:8px;
+                cursor:pointer;
+                box-shadow:0 6px 18px rgba(6,24,64,0.08);
+                transition:transform .14s, background .14s;
+            }
+            .slider .ctrl:hover { transform:translateY(-50%) translateY(-4px); background:#fff; }
+            .slider .prev { left:12px; }
+            .slider .next { right:12px; }
+            .slider .ctrl svg { width:18px; height:18px; color:#222; }
 
-  <!-- Backpacking Section -->
-  <article style="display: flex; gap: 30px; margin-bottom: 60px; align-items: center; flex-direction: row-reverse;">
-    <div style="flex: 1;">
-      <img src="img/backpacking.jpg" alt="Backpacking" style="width: 100%; border-radius: 8px; object-fit: cover; height: 300px;">
-    </div>
-    <div style="flex: 1;">
-      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Are You A Backpacker?</h2>
-      <p style="line-height: 1.6; margin-bottom: 16px;">Are you planning a SOLO climbing to Mount Kilimanjaro without help of the Porters? Foot On Kili Tanzania Adventures is here to help you planning your adventure. We are your budget trekking guide company offering the best of camping services special for Backpacking to all route of Mount Kilimanjaro with the best and affordable price.</p>
-      <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">Why Trekking With Us?</h3>
-      <ul style="list-style: none; padding: 0; line-height: 1.8;">
-        <li>✓ Value For Your Money</li>
-        <li>✓ High Safety Standards</li>
-        <li>✓ Successful Summits</li>
-        <li>✓ Mountain Knowledge</li>
-        <li>✓ Safari Knowledge</li>
-        <li>✓ Many years of Experience</li>
-        <li>✓ Professionalism</li>
-      </ul>
-    </div>
-  </article>
+            /* Tabs (buttons) */
+            .tabs {
+                display:flex;
+                gap:12px;
+                margin-top:16px;
+                align-items:center;
+                justify-content:center;
+                flex-wrap:wrap;
+            }
+            .tabs button {
+                background:#fff;
+                border:1px solid var(--border);
+                padding:10px 16px;
+                border-radius:10px;
+                cursor:pointer;
+                font-weight:600;
+                color:var(--text);
+                transition:background .12s, transform .12s;
+            }
+            .tabs button[aria-selected="true"] {
+                background:linear-gradient(90deg,var(--accent),#006494);
+                color:#fff;
+                transform:translateY(-2px);
+                border-color:transparent;
+            }
 
-  <!-- Community Support -->
-  <article style="display: flex; gap: 30px; margin-bottom: 60px; align-items: center;">
-    <div style="flex: 1;">
-      <img src="img/community.jpg" alt="Community Support" style="width: 100%; border-radius: 8px; object-fit: cover; height: 300px;">
-    </div>
-    <div style="flex: 1;">
-      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Community Support</h2>
-      <p style="line-height: 1.6;">Foot On Kili Tanzania Adventure is committed to responsible tourism. Our company is committed to the sustainability of the natural environment and well being of the people of Africa. In our effort to operate an Eco-friendly business, we have partnered with several local schools and conservation organizations in Tanzania to help promote conservation, environmental awareness, and community involvement in a way that is pleasurable and enlightening. Our donations provide scholarships, books, and supplies to local children with their daily needs such as food and housing as well as financial aid to cover school fees and other educational needs.</p>
-    </div>
-  </article>
+            /* Panels */
+            .panels {
+                margin-top:18px;
+                background:#fff;
+                border-radius:10px;
+                padding:18px;
+                border:1px solid var(--border);
+                box-shadow:0 10px 30px rgba(6,24,64,0.04);
+                min-height:120px;
+            }
+            .panel { display:none; color:#222; line-height:1.5; font-weight:500; }
+            .panel.active { display:block; }
 
-  <!-- Visa and Documents -->
-  <article style="display: flex; gap: 30px; margin-bottom: 60px; align-items: center; flex-direction: row-reverse;">
-    <div style="flex: 1;">
-      <img src="img/visa.jpg" alt="Visa and Documents" style="width: 100%; border-radius: 8px; object-fit: cover; height: 300px;">
-    </div>
-    <div style="flex: 1;">
-      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Visa and Documents</h2>
-      <p style="line-height: 1.6; margin-bottom: 16px;">It is possible to get your visa at the border going into Tanzania or at the Kilimanjaro or Dar es Salaam airports when you arrive. Allow extra time for this process. You will need US$100 cash if you are a U.S. citizen or US$50 cash for all other nationals.</p>
-      <p style="line-height: 1.6; margin-bottom: 16px;">Alternatively, you can get your visa ahead of time. U.S. Citizens get the visa application from the U.S. Tanzania Embassy website or call them in Washington D.C. at 202-939-6125, and ask for a visa application. Other nationalities check Tanzanian Embassies around the world for the nearest embassy.</p>
-      <p style="line-height: 1.6;">Allow 30 days for processing. You might want to consider sending it certified mail or Federal Express both directions to ensure the safety of your passport.</p>
-    </div>
-  </article>
+            /* Responsive */
+            @media (max-width:700px){
+                .slider { height:300px; }
+                .slider-title { font-size:32px; padding:8px 12px; }
+                .tabs button { padding:8px 12px; font-size:14px; }
+            }
+        </style>
 
-  <!-- Food and Dining -->
-  <article style="display: flex; gap: 30px; margin-bottom: 60px; align-items: center;">
-    <div style="flex: 1;">
-      <img src="img/food-dining.jpg" alt="Food and Dining" style="width: 100%; border-radius: 8px; object-fit: cover; height: 300px;">
-    </div>
-    <div style="flex: 1;">
-      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Food and Dining</h2>
-      <p style="line-height: 1.6; margin-bottom: 16px;">At the end of a long day's climb, you'll want to relax, unwind, and refuel for the next day's challenges. Re-energize mind and body in a warm, solar-lit dining tent, and enjoy hearty gourmet meals every day:</p>
-      <ul style="list-style: disc; margin-left: 20px; line-height: 1.8; margin-bottom: 16px;">
-        <li>Fresh, organic ingredients locally sourced from base in Moshi</li>
-        <li>Nutritionist-designed meals with optimal nutrition balance</li>
-        <li>Vegetarian, vegan, gluten-free, dairy-free, and kosher diets available</li>
-        <li>Unlimited purified drinking water provided daily</li>
-        <li>Trained chefs with hygienic food preparation standards</li>
-        <li>Custom dining tents and comfy chairs on every trek</li>
-      </ul>
-    </div>
-  </article>
+        <div class="slider" id="zanzibarSlider" aria-roledescription="carousel">
+            <div class="slide active" role="img" aria-label="Zanzibar beach sunrise"
+                 style="background-image:url('img/zanzibar1.jpg');"></div>
+            <div class="slide" role="img" aria-label="Zanzibar spice market"
+                 style="background-image:url('img/zanzibar2.jpg');"></div>
+            <div class="slide" role="img" aria-label="Zanzibar stone town"
+                 style="background-image:url('img/zanzibar3.jpg');"></div>
 
-</main>
- <style>
+            <div class="overlay" aria-hidden="true">
+                <div class="slider-title">Safari Packages</div>
+            </div>
+
+            <button class="ctrl prev" aria-label="Previous slide" title="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="ctrl next" aria-label="Next slide" title="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+       
+
+        <script>
+            (function(){
+                /* Slider logic */
+                const slider = document.getElementById('zanzibarSlider');
+                const slides = Array.from(slider.querySelectorAll('.slide'));
+                const prev = slider.querySelector('.prev');
+                const next = slider.querySelector('.next');
+                let idx = slides.findIndex(s => s.classList.contains('active')) || 0;
+                let timer = null;
+                const INTERVAL = 4000;
+
+                function showSlide(i) {
+                    slides[idx].classList.remove('active');
+                    idx = (i + slides.length) % slides.length;
+                    slides[idx].classList.add('active');
+                }
+                function nextSlide(){ showSlide(idx + 1); }
+                function prevSlide(){ showSlide(idx - 1); }
+
+                next.addEventListener('click', () => { nextSlide(); resetTimer(); });
+                prev.addEventListener('click', () => { prevSlide(); resetTimer(); });
+
+                slider.addEventListener('mouseenter', () => clearInterval(timer));
+                slider.addEventListener('focusin', () => clearInterval(timer));
+                slider.addEventListener('mouseleave', startTimer);
+                slider.addEventListener('focusout', startTimer);
+
+                function startTimer(){ timer = setInterval(nextSlide, INTERVAL); }
+                function resetTimer(){ clearInterval(timer); startTimer(); }
+
+                startTimer();
+
+                /* Tabs logic */
+                const tabButtons = Array.from(document.querySelectorAll('.tabs [role="tab"]'));
+                const panels = Array.from(document.querySelectorAll('.panels .panel'));
+
+                tabButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // update buttons
+                        tabButtons.forEach(b => b.setAttribute('aria-selected','false'));
+                        btn.setAttribute('aria-selected','true');
+
+                        // show panel
+                        const target = document.getElementById(btn.getAttribute('aria-controls'));
+                        panels.forEach(p => p.classList.remove('active'));
+                        target.classList.add('active');
+                        // move focus for keyboard users
+                        target.focus && target.focus();
+                    });
+
+                    // keyboard support (Left/Right)
+                    btn.addEventListener('keydown', (e) => {
+                        const curIndex = tabButtons.indexOf(document.activeElement);
+                        if (e.key === 'ArrowRight') {
+                            tabButtons[(curIndex + 1) % tabButtons.length].focus();
+                            tabButtons[(curIndex + 1) % tabButtons.length].click();
+                            e.preventDefault();
+                        } else if (e.key === 'ArrowLeft') {
+                            tabButtons[(curIndex - 1 + tabButtons.length) % tabButtons.length].focus();
+                            tabButtons[(curIndex - 1 + tabButtons.length) % tabButtons.length].click();
+                            e.preventDefault();
+                        }
+                    });
+                });
+            })();
+        </script>
+    </section></div></svg></button></svg></button></div></section>
+    <section class="itinerary-section" aria-label="Kilimanjaro routes and itineraries">
+        <style>
+            .itinerary-section { margin:20px 12px 60px; font-family:inherit; }
+            .itinerary-grid {
+                display:grid;
+                grid-template-columns:repeat(3, 1fr);
+                gap:16px;
+                align-items:stretch;
+                margin-bottom:18px;
+            }
+            .itinerary-grid button {
+                appearance:none;
+                -webkit-appearance:none;
+                border:1px solid var(--border);
+                background:#fff;
+                padding:20px 16px;
+                font-size:18px;
+                font-weight:700;
+                border-radius:12px;
+                cursor:pointer;
+                color:var(--text);
+                box-shadow:0 6px 18px rgba(6,24,64,0.04);
+                transition:transform .12s, background .12s, color .12s;
+                text-align:center;
+            }
+            .itinerary-grid button:hover { transform:translateY(-4px); }
+            .itinerary-grid button[aria-selected="true"] {
+                background:linear-gradient(90deg, var(--accent), #006494);
+                color:#fff;
+                transform:translateY(-2px);
+                border-color:transparent;
+            }
+
+            /* Panels */
+            .itinerary-panels {
+                background:#fff;
+                border:1px solid var(--border);
+                border-radius:10px;
+                padding:18px;
+                box-shadow:0 10px 30px rgba(6,24,64,0.04);
+                min-height:120px;
+            }
+            .itinerary-panels .panel { display:none; color:#222; line-height:1.5; font-weight:500; }
+            .itinerary-panels .panel.active { display:block; }
+            .panel .close {
+                float:right;
+                background:transparent;
+                border:0;
+                font-size:18px;
+                cursor:pointer;
+                color:#666;
+            }
+
+            /* Responsive: 2 columns then 1 */
+            @media (max-width:1000px){ .itinerary-grid { grid-template-columns:repeat(2,1fr); } }
+            @media (max-width:600px){ .itinerary-grid { grid-template-columns:1fr; } .itinerary-grid button{ font-size:16px; padding:16px; } }
+        </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 18px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Safari Packages</h2>
+        <div class="itinerary-grid" role="tablist" aria-label="Kilimanjaro route tabs">
+            <button role="tab" id="tab-lemosho" aria-controls="panel-lemosho" aria-selected="false" data-target="panel-lemosho">2 Days Safari</button>
+            <button role="tab" id="tab-machame" aria-controls="panel-machame" aria-selected="false" data-target="panel-machame">3 Days Safari</button>
+            <button role="tab" id="tab-rongai" aria-controls="panel-rongai" aria-selected="false" data-target="panel-rongai">4 Days Safari</button>
+            <button role="tab" id="tab-marangu" aria-controls="panel-marangu" aria-selected="false" data-target="panel-marangu">5 Days Safari</button>
+            <button role="tab" id="tab-shira" aria-controls="panel-shira" aria-selected="false" data-target="panel-shira">7 Days Safari</button>
+            <button role="tab" id="tab-umbwe" aria-controls="panel-umbwe" aria-selected="false" data-target="panel-umbwe">9 Days Safari</button>
+            <button role="tab" id="tab-jk" aria-controls="panel-jk" aria-selected="false" data-target="panel-jk">12 Days Safari</button>
+        </div>
+         
+        <div class="itinerary-panels" aria-live="polite">
+            <div id="panel-lemosho" class="panel" role="tabpanel" tabindex="-1" aria-labelledby="tab-lemosho">
+                <button class="close" aria-label="Close panel">✕</button>
+                <h3>2 Days Safari</h3>
+                <p>Sample itinerary overview for Lemosho Route. Replace this text with your full day-by-day itinerary, durations, difficulty, and included services.</p>
+            </div>
+
+            <div id="panel-machame" class="panel" role="tabpanel" tabindex="-1" aria-labelledby="tab-machame">
+                <button class="close" aria-label="Close panel">✕</button>
+                <h3>3 Days Safari</h3>
+                <p>
+                    <b>3-Day Safari – Lake Manyara, Ngorongoro & Tarangire</b><br>
+
+<b>Experience Type:</b> Wildlife & Nature Safari<br><br>
+
+Explore the wonders of northern Tanzania on this 3-day safari, experiencing diverse landscapes, abundant wildlife, and iconic African scenery. This safari is perfect for nature lovers, photographers, and adventure travelers.<br><br>
+
+
+
+<b> Day 1: Arrival & Lake Manyara National Park</b><br>
+
+<b>Morning:</b><br>
+
+* Pick-up from Arusha or Kilimanjaro International Airport (JRO).<br>
+* Drive to Lake Manyara National Park (approx. 2 hours).<br>
+
+<b>Late Morning – Afternoon:</b><br>
+
+* Embark on a game drive in Lake Manyara.<br>
+* Spot wildlife including flamingos, **hippos, **elephants, **giraffes, and the famous **tree-climbing lions.<br>
+
+<b>Evening:</b><br>
+
+* Scenic drive to the Ngorongoro Conservation Area (approx. 2 hours).<br>
+
+<b>Overnight Accommodations (Options):</b><br>
+
+* Boulevard Inn – Mid-range<br>
+* Ngorongoro Serena Safari Lodge – Luxury<br>
+* Ngorongoro Sopa Lodge – Luxury<br><br>
+
+
+
+ <b>Day 2: Ngorongoro Crater & Transfer to Tarangire</b><br>
+
+<b>Early Morning:</b><br>
+
+* Breakfast at the lodge.<br>
+* Descend into Ngorongoro Crater for a full-day game drive (approx. 6 hours).<br>
+
+<b>Wildlife Highlights:</b><br>
+
+* Lions, elephants, rhinos, zebras, wildebeest, and other abundant species.<br>
+* Explore “The Eden of Africa” with its breathtaking scenery.<br>
+
+<b>Mid-Afternoon:</b><br>
+
+* Ascend from the crater and drive to Tarangire National Park (approx. 2 hours).<br>
+* Optional short game drive in Tarangire upon arrival.<br>
+
+<b>Overnight Accommodations (Options):</b><br>
+
+* Tarangire Safari Lodge – Mid-range<br>
+* Elephant Bedroom Camp – Luxury<br>
+* Sangaiwe Tented Lodge – Budget-friendly<br><br>
+
+
+
+ <b>Day 3: Tarangire National Park & Return to Arusha</b><br>
+
+<b>Early Morning:</b><br>
+
+* Morning game drive in Tarangire, famous for **large elephant herds and iconic baobab trees.<br>
+
+<b>Late Morning – Midday:</b><br>
+
+* Continue wildlife viewing and enjoy lunch at the lodge.<br>
+
+<b>Afternoon:</b><br>
+
+* Depart for Arusha or Kilimanjaro International Airport (JRO) (approx. 2–3 hours).<br><br>
+
+
+
+<b>✔ Safari Package Inclusions</b><br>
+
+* Professional English-speaking safari driver/guide<br>
+* Transportation in a 4×4 safari vehicle<br>
+* Accommodations as specified<br>
+* Park entry fees for Lake Manyara, Ngorongoro, and Tarangire<br>
+* Scheduled game drives<br>
+* Breakfast during safari days<br>
+* Bottled water during game drives<br>
+* Pick-up and drop-off at agreed location (Arusha or airport)<br><br>
+
+
+
+<b>❌ Exclusions</b><br>
+
+* International flights to Tanzania<br>
+* Visas (if applicable)<br>
+* Lunches and dinners (unless specified)<br>
+* Tips for guides and staff<br>
+* Personal expenses (souvenirs, laundry, etc.)<br>
+* Travel insurance<br>
+* Optional activities (hot air balloon safari, cultural visits)</p>
+            </div>
+
+            <div id="panel-rongai" class="panel" role="tabpanel" tabindex="-1" aria-labelledby="tab-rongai">
+                <button class="close" aria-label="Close panel">✕</button>
+                <h3>4 Days Safari</h3>
+                <p><b>4-Day Safari – Tarangire, Serengeti & Ngorongoro</b><br>
+
+<b>4-Day Tanzania Safari Itinerary</b><br>
+
+<b>Destinations:</b> Tarangire National Park, Serengeti National Park, Ngorongoro Conservation Area<br>
+<b>Experience Type:</b> Wildlife & Nature Safari<br>
+
+Explore the iconic northern circuit of Tanzania on this 4-day safari, featuring abundant wildlife, stunning landscapes, and unforgettable safari experiences. This itinerary is perfect for wildlife enthusiasts, photographers, and adventure travelers.<br>
+
+<b>Day 1: Arrival & Tarangire National Park</b><br>
+
+<b>Morning:</b><br>
+
+Arrival at Arusha or Kilimanjaro International Airport (JRO).<br>
+Transfer to Tarangire National Park (approx. 2-hour drive).<br>
+
+<b>Midday & Afternoon:</b><br>
+
+ Embark on your first game drive in Tarangire, famous for its large herds of elephants, iconic baobab trees, and diverse wildlife including zebras, giraffes, and antelopes.<br>
+
+<b>Evening:</b><br>
+
+ Check-in at Tarangire River Camp or Swala Camp.<br>
+
+<b>Inclusions:</b><br>
+
+ Park fees<br>
+ Guided game drives<br>
+ Accommodation<br>
+ Meals (lunch & dinner)<br>
+ Drinking water<br>
+
+<b>Exclusions:</b><br>
+
+Alcoholic beverages<br>
+Personal expenses<br>
+Tips<br>
+ Flights<br><br>
+
+
+
+<b>Day 2: Tarangire → Serengeti National Park</b><br>
+
+<b>Morning:</b><br>
+
+ Early breakfast at the lodge.<br>
+ Drive to Serengeti National Park (approx. 4–5 hours).<br>
+
+<b>Midday & Afternoon:</b><br>
+
+ Arrive in Serengeti and enjoy an afternoon game drive, spotting the Big Five and experiencing the vast savannah plains.<br>
+
+<b>Evening:</b><br>
+
+ Check-in at Serengeti Sopa Lodge or Kubu Kubu Tented Lodge.<br>
+
+<b>Inclusions:</b><br>
+
+ Park entry fees<br>
+ Guided game drives<br>
+ Accommodation<br>
+ Meals & bottled water<br>
+
+<b>Exclusions:</b><br>
+
+ Alcoholic beverages<br>
+ Personal expenses<br>
+ Tips<br><br>
+
+
+<b>Day 3: Full Day Serengeti & Transfer to Ngorongoro</b><br>
+
+<b>Morning:</b><br>
+
+ Early morning *game drive in Serengeti* for prime wildlife viewing.<br>
+ Optional *hot air balloon safari* (additional cost).<br>
+
+<b>Midday:</b><br>
+
+ Return to the lodge for breakfast and relaxation.<br>
+
+<b>Afternoon:</b><br>
+
+ Drive to *Ngorongoro Conservation Area* (approx. 2–3 hours).<br>
+ Stop at *Olduvai Gorge* en route for a brief cultural and historical visit.<br>
+
+<b>Evening:</b><br>
+
+ Check-in at a lodge near Ngorongoro, such as Ngorongoro Sopa Lodge or Ngorongoro Crater Lodge.<br>
+
+<b>Inclusions:</b><br>
+
+ Park fees<br>
+ Game drives<br>
+ Accommodation<br>
+ Meals & bottled water<br>
+
+<b>Exclusions:</b><br>
+
+ Optional hot air balloon ride<br>
+ Personal expenses<br>
+ Tips<br><br>
+
+
+
+ <b>Day 4: Ngorongoro Crater & Return</b><br>
+
+<b>Morning:</b><br>
+
+ Early breakfast, then descend into Ngorongoro Crater for a full-day game drive.<br>
+
+<b>Midday & Afternoon:</b><br>
+
+ Enjoy a picnic lunch on the crater floor.<br>
+ Wildlife highlights include lions, elephants, rhinos, flamingos, and many more species in this unique ecosystem.<br>
+
+<b>Late Afternoon:</b><br>
+
+ Return drive to *Arusha* or transfer to your next destination.<br>
+
+<b>Inclusions:</b><br>
+
+ Crater entrance fees<br>
+ Guided game drives<br>
+ Picnic lunch<br>
+ Transport within the park<br>
+
+<b>Exclusions:</b><br>
+
+ Additional optional activities<br>
+ Tips<br>
+ Personal expenses<br><br>
+
+
+
+<b>✔ Safari Package Inclusions</b><br>
+
+ Accommodation at specified lodges and tented camps<br>
+ Guided game drives with professional English-speaking guides<br>
+ Park entrance fees<br>
+ Meals and bottled water (as specified)<br>
+ Transportation within the parks in 4×4 safari vehicles<br><br>
+
+
+
+<b>❌ Exclusions</b><br>
+
+ International and domestic flights<br>
+ Visa fees<br>
+ Alcoholic beverages and soft drinks (unless specified)<br>
+ Personal expenses (souvenirs, laundry, etc.)<br>
+ Tips for guides and staff<br>
+ Optional hot air balloon safaris<br>.</p>
+            </div>
+
+            <div id="panel-marangu" class="panel" role="tabpanel" tabindex="-1" aria-labelledby="tab-marangu">
+                <button class="close" aria-label="Close panel">✕</button>
+                <h3>5 Days Safari</h3>
+                <p>Sample itinerary overview for Marangu Route. Replace with your Marangu route details.</p>
+            </div>
+
+            <div id="panel-shira" class="panel" role="tabpanel" tabindex="-1" aria-labelledby="tab-shira">
+                <button class="close" aria-label="Close panel">✕</button>
+                <h3>7 Days Safari</h3>
+                <p>Sample itinerary overview for Shira Route. Add day-by-day information as needed.</p>
+            </div>
+
+            <div id="panel-umbwe" class="panel" role="tabpanel" tabindex="-1" aria-labelledby="tab-umbwe">
+                <button class="close" aria-label="Close panel">✕</button>
+                <h3>9 Days Safari</h3>
+                <p>Sample itinerary overview for Umbwe Route. Provide details for this steeper and shorter route.</p>
+            </div>
+
+            <div id="panel-jk" class="panel" role="tabpanel" tabindex="-1" aria-labelledby="tab-jk">
+                <button class="close" aria-label="Close panel">✕</button>
+                <h3>12 Days Safari</h3>
+                <p>Sample itinerary overview for Umbwe Route. Provide details for this steeper and shorter route.</p>
+            </div>
+        </div>
+
+        <script>
+            (function(){
+                const buttons = Array.from(document.querySelectorAll('.itinerary-grid [role="tab"]'));
+                const panels = Array.from(document.querySelectorAll('.itinerary-panels .panel'));
+
+                function closeAll() {
+                    panels.forEach(p => p.classList.remove('active'));
+                    buttons.forEach(b => b.setAttribute('aria-selected','false'));
+                }
+
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const targetId = btn.dataset.target;
+                        const panel = document.getElementById(targetId);
+                        if (!panel) return;
+                        const isActive = panel.classList.contains('active');
+
+                        closeAll();
+                        if (!isActive) {
+                            btn.setAttribute('aria-selected','true');
+                            panel.classList.add('active');
+                            // move focus into panel for accessibility
+                            panel.focus();
+                            // scroll into view on small screens
+                            panel.scrollIntoView({behavior:'smooth', block:'start'});
+                        }
+                    });
+
+                    // keyboard support: Enter / Space
+                    btn.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            btn.click();
+                        }
+                    });
+                });
+
+                // close buttons inside panels
+                document.querySelectorAll('.itinerary-panels .close').forEach(c => {
+                    c.addEventListener('click', (e) => {
+                        closeAll();
+                        // return focus to first button for predictable behavior
+                        buttons[0] && buttons[0].focus();
+                    });
+                });
+
+                // close on Escape
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' || e.key === 'Esc') {
+                        closeAll();
+                    }
+                });
+
+                // click outside to close panels
+                document.addEventListener('click', (e) => {
+                    const grid = document.querySelector('.itinerary-grid');
+                    const panelsWrap = document.querySelector('.itinerary-panels');
+                    if (!grid || !panelsWrap) return;
+                    if (!grid.contains(e.target) && !panelsWrap.contains(e.target)) {
+                        closeAll();
+                    }
+                });
+            })();
+        </script>
+    </section></div>
+     <style>
          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
 
         .itinerary-heading{

@@ -532,6 +532,103 @@
             </a>
         </div>
     </section></svg></a></svg></a></div></section>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Biography</h2>
+<section class="about-company" aria-labelledby="about-heading">
+    <style>
+        .about-company {
+            margin: 18px 12px;
+            padding: 18px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(6, 24, 64, 0.03);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #222;
+        }
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+        .about-content h2 {
+            margin: 0 0 12px;
+            font-size: 40px;
+            font-weight: 700;
+            color: rgb(25, 25, 25);
+        }
+        .about-content p {
+            margin: 0 0 12px;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .about-image {
+            width: 80%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+        @media (max-width: 760px) {
+            .about-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                height: 240px;
+            }
+        }
+    </style>
+     
+
+    <div class="about-wrapper">
+        <div class="about-content">
+            <h2 id="about-heading">About Our Company</h2>
+            <p>Foot On Kili Tanzania Adventure & Safari is your premier travel partner with over 20 years of experience in crafting unforgettable journeys across Tanzania.</p>
+            <p>We specialize in Kilimanjaro climbing expeditions, safari adventures, and cultural tours. Our expert guides and carefully planned itineraries ensure safety, comfort, and authentic experiences.</p>
+            <p>Whether you're seeking the thrill of summit attempts, wildlife encounters, or cultural immersion, we deliver personalized service with one-window convenience.</p>
+        </div>
+        <img class="about-image" src="img/blog-1.jpg" alt="Foot On Kili Tanzania team and experience" />
+    </div>
+</section>
    <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
 
@@ -823,7 +920,7 @@
                     <h3 class="tour-title">Old Mushi Cultural Tour</h3>
                     <p class="tour-desc">Local village visits, traditions and cultural activities.</p>
                     <div class="tour-actions">
-                        <button class="detail-btn tour-detail" data-href="old-mushi-cultural-tour.html" aria-label="Open Old Mushi Cultural Tour details">Details</button>
+                        <button class="detail-btn tour-detail" data-href="old-moshi-cultural.html" aria-label="Open Old Mushi Cultural Tour details">Details</button>
                     </div>
                 </div>
             </article>
@@ -845,7 +942,7 @@
                     <h3 class="tour-title">Kilimanjaro With Helicopter</h3>
                     <p class="tour-desc">Scenic helicopter transfers and aerial views of Kilimanjaro.</p>
                     <div class="tour-actions">
-                        <button class="detail-btn tour-detail" data-href="kilimanjaro-with-helicopter.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
+                        <button class="detail-btn tour-detail" data-href="kilimanjaro-helicopter.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
                     </div>
                 </div>
             </article>
@@ -953,7 +1050,7 @@
                     <h3 class="safari-title">2 days Safari</h3>
                     <p class="safari-desc">Short weekend safari — ideal for limited time visitors. Game drives and lodge stay.</p>
                     <div class="safari-actions">
-                        <button class="detail-btn safari-detail" data-href="safari-2-days.html" aria-label="Open 2 days Safari details">Details</button>
+                        <button class="detail-btn safari-detail" data-href="safari.html" aria-label="Open 2 days Safari details">Details</button>
                     </div>
                 </div>
             </article>
@@ -964,7 +1061,7 @@
                     <h3 class="safari-title">3 days Safari</h3>
                     <p class="safari-desc">Extended weekend safari with full-day game drives and cultural visit.</p>
                     <div class="safari-actions">
-                        <button class="detail-btn safari-detail" data-href="safari-3-days.html" aria-label="Open 3 days Safari details">Details</button>
+                        <button class="detail-btn safari-detail" data-href="safari.html" aria-label="Open 3 days Safari details">Details</button>
                     </div>
                 </div>
             </article>
@@ -975,7 +1072,7 @@
                     <h3 class="safari-title">4 days Safari</h3>
                     <p class="safari-desc">Four-day itinerary covering prime parks and game-viewing routes.</p>
                     <div class="safari-actions">
-                        <button class="detail-btn safari-detail" data-href="safari-4-days.html" aria-label="Open 4 days Safari details">Details</button>
+                        <button class="detail-btn safari-detail" data-href="safari.html" aria-label="Open 4 days Safari details">Details</button>
                     </div>
                 </div>
             </article>
@@ -986,7 +1083,7 @@
                     <h3 class="safari-title">5 days Safari</h3>
                     <p class="safari-desc">Five days of immersive wildlife experience with guided game drives and lodge stays.</p>
                     <div class="safari-actions">
-                        <button class="detail-btn safari-detail" data-href="safari-5-days.html" aria-label="Open 5 days Safari details">Details</button>
+                        <button class="detail-btn safari-detail" data-href="safari.html" aria-label="Open 5 days Safari details">Details</button>
                     </div>
                 </div>
             </article>
@@ -997,7 +1094,7 @@
                     <h3 class="safari-title">7 days Safari</h3>
                     <p class="safari-desc">Week-long safari for a thorough exploration of multiple parks and landscapes.</p>
                     <div class="safari-actions">
-                        <button class="detail-btn safari-detail" data-href="safari-7-days.html" aria-label="Open 7 days Safari details">Details</button>
+                        <button class="detail-btn safari-detail" data-href="safari.html" aria-label="Open 7 days Safari details">Details</button>
                     </div>
                 </div>
             </article>
@@ -1008,7 +1105,7 @@
                     <h3 class="safari-title">9 days Safari</h3>
                     <p class="safari-desc">Nine-day premium safari combining major parks, cultural visits and relaxation.</p>
                     <div class="safari-actions">
-                        <button class="detail-btn safari-detail" data-href="safari-9-days.html" aria-label="Open 9 days Safari details">Details</button>
+                        <button class="detail-btn safari-detail" data-href="safari.html" aria-label="Open 9 days Safari details">Details</button>
                     </div>
                 </div>
             </article>
@@ -1019,7 +1116,7 @@
                     <h3 class="safari-title">12 days Safari</h3>
                     <p class="safari-desc">Comprehensive 12-day expedition visiting remote parks and luxury camps.</p>
                     <div class="safari-actions">
-                        <button class="detail-btn safari-detail" data-href="safari-12-days.html" aria-label="Open 12 days Safari details">Details</button>
+                        <button class="detail-btn safari-detail" data-href="safari.html" aria-label="Open 12 days Safari details">Details</button>
                     </div>
                 </div>
             </article>
@@ -1038,13 +1135,386 @@
             })();
         </script>
     </section></div></article></div></article></div></article></div></article></div></article></div></article></div></article></div>
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Top Destinations</h2>
+        
+    <section class="destinations" aria-labelledby="destinations-heading">
+        <style>
+            .destinations {
+                margin: 18px 12px;
+                padding: 18px;
+                background: #fff;
+                border: 1px solid #e6e6e6;
+                border-radius: 8px;
+                box-shadow: 0 8px 20px rgba(6, 24, 64, 0.03);
+                font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                color: #222;
+            }
+            .destinations h2 {
+                margin: 0 0 16px;
+                font-size: 1.4rem;
+            }
+            .slider-container {
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+            }
+            .slider-wrapper {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                gap: 16px;
+            }
+            .slide {
+                flex: 0 0 calc(50% - 8px);
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                min-height: 400px;
+                display: flex;
+                align-items: flex-end;
+            }
+            .slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            .slide-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+                display: flex;
+                align-items: flex-end;
+                padding: 20px;
+            }
+            .slide-title {
+                margin: 0;
+                font-size: 28px;
+                font-weight: 700;
+                color: #fff;
+                text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            .slider-controls {
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+                margin-top: 16px;
+            }
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                border: none;
+                border-radius: 50%;
+                background: #0077b6;
+                color: #fff;
+                cursor: pointer;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s;
+            }
+            .slider-btn:hover {
+                background: #005f93;
+            }
+            .slider-btn:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+            }
+            @media (max-width: 760px) {
+                .slide {
+                    flex: 0 0 100%;
+                    min-height: 300px;
+                }
+                .slide-title {
+                    font-size: 22px;
+                }
+            }
+        </style>
+
+        <h2 id="destinations-heading">Top Destinations</h2>
+
+        <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+                <article class="slide">
+                    <img src="img/kilimanjaro.jpg" alt="Mount Kilimanjaro" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Mount Kilimanjaro</h3>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="img/serengeti.jpg" alt="Serengeti National Park" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Serengeti</h3>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="img/ngorongoro.jpg" alt="Ngorongoro Crater" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Ngorongoro</h3>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="img/zanzibar-beach.jpg" alt="Zanzibar Beach" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Zanzibar</h3>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="img/lake-victoria.jpg" alt="Lake Victoria" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Lake Victoria</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn" aria-label="Previous slide">❮</button>
+            <button class="slider-btn" id="nextBtn" aria-label="Next slide">❯</button>
+        </div>
+
+        <script>
+            (function(){
+                const wrapper = document.getElementById('sliderWrapper');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const slides = document.querySelectorAll('.slide');
+                
+                let currentIndex = 0;
+                const slideWidth = 50; // 50% for 2 slides visible
+                const totalSlides = slides.length;
+
+                function updateSlider() {
+                    const offset = -currentIndex * slideWidth;
+                    wrapper.style.transform = `translateX(${offset}%)`;
+                    prevBtn.disabled = currentIndex === 0;
+                    nextBtn.disabled = currentIndex >= totalSlides - 2;
+                }
+
+                prevBtn.addEventListener('click', function(){
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+
+                nextBtn.addEventListener('click', function(){
+                    if (currentIndex < totalSlides - 2) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+
+                updateSlider();
+            })();
+        </script>
+    </section>
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Our Transfer Service</h2>
+        <section></section>
+    <style>
+        .transfer-section {
+            margin: 18px 12px;
+            padding: 18px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(6, 24, 64, 0.03);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #222;
+        }
+        .transfer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            align-items: start;
+        }
+        .transfer-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            background: transparent;
+            transition: transform .14s, box-shadow .14s;
+            padding: 16px;
+        }
+        .transfer-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(6, 24, 64, 0.06);
+        }
+        .transfer-icon {
+            width: 56px;
+            height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #f0f7ff;
+            color: #0077b6;
+            font-size: 32px;
+        }
+        .transfer-title {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .transfer-desc {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .transfer-btn {
+            margin-top: auto;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 0;
+            background: #0077b6;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .transfer-btn:hover, .transfer-btn:focus {
+            background: #005f93;
+            outline: none;
+        }
+        @media (max-width: 760px) {
+            .transfer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <section class="transfer-section" aria-labelledby="transfer-heading">
+        <h2 id="transfer-heading">Our Transfer Service</h2>
+        <p style="margin-top: 6px; margin-bottom: 14px; color: #444;">Professional transportation solutions for your journey. Book your taxi now!</p>
+
+        <div class="transfer-grid" role="list">
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">🚕</div>
+                <h3 class="transfer-title">Airport Transfers</h3>
+                <p class="transfer-desc">Reliable pick-up and drop-off service from Kilimanjaro International Airport.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book airport transfer">Book Your Taxi Now</button>
+            </article>
+
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">🛣️</div>
+                <h3 class="transfer-title">City Tours</h3>
+                <p class="transfer-desc">Comfortable transportation for exploring Moshi and surrounding areas.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book city tour transfer">Book Your Taxi Now</button>
+            </article>
+
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">⛰️</div>
+                <h3 class="transfer-title">Hiking Transfers</h3>
+                <p class="transfer-desc">Safe transportation to hiking trails and mountain starting points.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book hiking transfer">Book Your Taxi Now</button>
+            </article>
+
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">🏨</div>
+                <h3 class="transfer-title">Hotel Transfers</h3>
+                <p class="transfer-desc">Convenient transfers between hotels and tour destinations.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book hotel transfer">Book Your Taxi Now</button>
+            </article>
+        </div>
+
+        <script>
+            (function(){
+                const buttons = document.querySelectorAll('.book-taxi');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', function(){
+                        const href = this.dataset.href;
+                        if (!href) return;
+                        window.location.href = href;
+                    });
+                });
+            })();
+        </script>
+    </section>
     <footer class="site-footer" role="contentinfo" aria-label="Footer">
         <style>
             .site-footer {
                 --accent: #0077b6;
                 background:rgb(28, 28, 28);
                 border-top:1px solid var(--border, #e6e6e6);
-                margin:18px 12px 36px;
+                margin:50px 12px 36px;
                 padding:22px;
                 border-radius:10px;
                 box-shadow:0 8px 20px rgba(6,24,64,0.03);

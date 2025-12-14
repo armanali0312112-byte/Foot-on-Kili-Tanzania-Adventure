@@ -18,6 +18,9 @@
                 --border:#e6e6e6;
                 --text:#222;
             }
+              body{
+                font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            }
 
             *{box-sizing:border-box}
             header { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text) }
@@ -336,4 +339,545 @@
             })();
         </script>
     </header>
+</body>
+<section class="zanzibar-section" aria-label="Zanzibar hero and details">
+        <style>
+            /* Slider */
+            .zanzibar-section { margin:20px 12px 60px; font-family:inherit; }
+            .slider {
+                position:relative;
+                height:420px;
+                border-radius:10px;
+                overflow:hidden;
+                background:#000;
+                box-shadow:0 8px 30px rgba(6,24,64,0.06);
+            }
+            .slide {
+                position:absolute;
+                inset:0;
+                background-size:cover;
+                background-position:center;
+                opacity:0;
+                transform:scale(1.02);
+                transition:opacity .6s ease, transform .6s ease;
+            }
+            .slide.active { opacity:1; transform:scale(1); }
+            .slider .overlay {
+                position:absolute;
+                inset:0;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                pointer-events:none;
+            }
+            .slider-title {
+                color:#fff;
+                font-size:48px;
+                font-weight:700;
+                text-shadow:0 6px 18px rgba(0,0,0,0.5);
+                background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15));
+                padding:12px 22px;
+                border-radius:8px;
+                letter-spacing:0.6px;
+            }
+
+            /* Prev/Next */
+            .slider .ctrl {
+                position:absolute;
+                top:50%;
+                transform:translateY(-50%);
+                background:rgba(255,255,255,0.92);
+                border:0;
+                width:44px;
+                height:44px;
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:8px;
+                cursor:pointer;
+                box-shadow:0 6px 18px rgba(6,24,64,0.08);
+                transition:transform .14s, background .14s;
+            }
+            .slider .ctrl:hover { transform:translateY(-50%) translateY(-4px); background:#fff; }
+            .slider .prev { left:12px; }
+            .slider .next { right:12px; }
+            .slider .ctrl svg { width:18px; height:18px; color:#222; }
+
+            /* Tabs (buttons) */
+            .tabs {
+                display:flex;
+                gap:12px;
+                margin-top:16px;
+                align-items:center;
+                justify-content:center;
+                flex-wrap:wrap;
+            }
+            .tabs button {
+                background:#fff;
+                border:1px solid var(--border);
+                padding:10px 16px;
+                border-radius:10px;
+                cursor:pointer;
+                font-weight:600;
+                color:var(--text);
+                transition:background .12s, transform .12s;
+            }
+            .tabs button[aria-selected="true"] {
+                background:linear-gradient(90deg,var(--accent),#006494);
+                color:#fff;
+                transform:translateY(-2px);
+                border-color:transparent;
+            }
+
+            /* Panels */
+            .panels {
+                margin-top:18px;
+                background:#fff;
+                border-radius:10px;
+                padding:18px;
+                border:1px solid var(--border);
+                box-shadow:0 10px 30px rgba(6,24,64,0.04);
+                min-height:120px;
+            }
+            .panel { display:none; color:#222; line-height:1.5; font-weight:500; }
+            .panel.active { display:block; }
+
+            /* Responsive */
+            @media (max-width:700px){
+                .slider { height:300px; }
+                .slider-title { font-size:32px; padding:8px 12px; }
+                .tabs button { padding:8px 12px; font-size:14px; }
+            }
+        </style>
+
+        <div class="slider" id="zanzibarSlider" aria-roledescription="carousel">
+            <div class="slide active" role="img" aria-label="Zanzibar beach sunrise"
+                 style="background-image:url('img/zanzibar1.jpg');"></div>
+            <div class="slide" role="img" aria-label="Zanzibar spice market"
+                 style="background-image:url('img/zanzibar2.jpg');"></div>
+            <div class="slide" role="img" aria-label="Zanzibar stone town"
+                 style="background-image:url('img/zanzibar3.jpg');"></div>
+
+            <div class="overlay" aria-hidden="true">
+                <div class="slider-title">Bike Kilimanjaro</div>
+            </div>
+
+            <button class="ctrl prev" aria-label="Previous slide" title="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="ctrl next" aria-label="Next slide" title="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Zanzibar details tabs">
+            <button role="tab" aria-selected="true" aria-controls="overview" id="tab-overview">Overview</button>
+            <button role="tab" aria-selected="false" aria-controls="itinerary" id="tab-itinerary">Itinerary</button>
+            <button role="tab" aria-selected="false" aria-controls="additional" id="tab-additional">Additional info</button>
+        </div>
+
+        <div class="panels">
+            <div id="overview" class="panel active" role="tabpanel" aria-labelledby="tab-overview">
+                <h3 style="margin-top:0">Overview</h3>
+                <p>
+                    Zanzibar — an archipelago off Tanzania's coast — is famous for its white-sand beaches,
+                    turquoise waters, spice farms and historic Stone Town. Enjoy beach relaxation, snorkeling,
+                    cultural walks and spice tours.
+                </p>
+            </div>
+
+            <div id="itinerary" class="panel" role="tabpanel" aria-labelledby="tab-itinerary">
+                <h3 style="margin-top:0">Itinerary</h3>
+                <ul>
+                    <li>Day 1: Arrival & Stone Town walking tour.</li>
+                    <li>Day 2: Spice farm visit and local village experience.</li>
+                    <li>Day 3: Beach day — snorkeling or island hopping.</li>
+                </ul>
+            </div>
+
+            <div id="additional" class="panel" role="tabpanel" aria-labelledby="tab-additional">
+                <h3 style="margin-top:0">Additional info</h3>
+                <p>
+                    Best time to visit: June–October (dry season). Currency: Tanzanian Shilling (TZS).
+                    Remember to carry sunscreen, insect repellent and a light scarf for Stone Town visits.
+                </p>
+            </div>
+        </div>
+
+        <script>
+            (function(){
+                /* Slider logic */
+                const slider = document.getElementById('zanzibarSlider');
+                const slides = Array.from(slider.querySelectorAll('.slide'));
+                const prev = slider.querySelector('.prev');
+                const next = slider.querySelector('.next');
+                let idx = slides.findIndex(s => s.classList.contains('active')) || 0;
+                let timer = null;
+                const INTERVAL = 4000;
+
+                function showSlide(i) {
+                    slides[idx].classList.remove('active');
+                    idx = (i + slides.length) % slides.length;
+                    slides[idx].classList.add('active');
+                }
+                function nextSlide(){ showSlide(idx + 1); }
+                function prevSlide(){ showSlide(idx - 1); }
+
+                next.addEventListener('click', () => { nextSlide(); resetTimer(); });
+                prev.addEventListener('click', () => { prevSlide(); resetTimer(); });
+
+                slider.addEventListener('mouseenter', () => clearInterval(timer));
+                slider.addEventListener('focusin', () => clearInterval(timer));
+                slider.addEventListener('mouseleave', startTimer);
+                slider.addEventListener('focusout', startTimer);
+
+                function startTimer(){ timer = setInterval(nextSlide, INTERVAL); }
+                function resetTimer(){ clearInterval(timer); startTimer(); }
+
+                startTimer();
+
+                /* Tabs logic */
+                const tabButtons = Array.from(document.querySelectorAll('.tabs [role="tab"]'));
+                const panels = Array.from(document.querySelectorAll('.panels .panel'));
+
+                tabButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // update buttons
+                        tabButtons.forEach(b => b.setAttribute('aria-selected','false'));
+                        btn.setAttribute('aria-selected','true');
+
+                        // show panel
+                        const target = document.getElementById(btn.getAttribute('aria-controls'));
+                        panels.forEach(p => p.classList.remove('active'));
+                        target.classList.add('active');
+                        // move focus for keyboard users
+                        target.focus && target.focus();
+                    });
+
+                    // keyboard support (Left/Right)
+                    btn.addEventListener('keydown', (e) => {
+                        const curIndex = tabButtons.indexOf(document.activeElement);
+                        if (e.key === 'ArrowRight') {
+                            tabButtons[(curIndex + 1) % tabButtons.length].focus();
+                            tabButtons[(curIndex + 1) % tabButtons.length].click();
+                            e.preventDefault();
+                        } else if (e.key === 'ArrowLeft') {
+                            tabButtons[(curIndex - 1 + tabButtons.length) % tabButtons.length].focus();
+                            tabButtons[(curIndex - 1 + tabButtons.length) % tabButtons.length].click();
+                            e.preventDefault();
+                        }
+                    });
+                });
+            })();
+        </script>
+    </section></div></svg></button></svg></button></div></section>
+     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .itinerary-heading{
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            /* Gradient text for eye-catching look */
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        /* Decorative underline / accent */
+        .itinerary-heading::after{
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 700px) {
+            .itinerary-heading { font-size: 24px; }
+            .itinerary-heading::after { width: 72px; height: 5px; }
+        }
+        </style>
+
+        <h2 class="itinerary-heading">Our Transfer Service</h2>
+        <section></section>
+    <style>
+        .transfer-section {
+            margin: 18px 12px;
+            padding: 18px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(6, 24, 64, 0.03);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #222;
+        }
+        .transfer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            align-items: start;
+        }
+        .transfer-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            background: transparent;
+            transition: transform .14s, box-shadow .14s;
+            padding: 16px;
+        }
+        .transfer-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(6, 24, 64, 0.06);
+        }
+        .transfer-icon {
+            width: 56px;
+            height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #f0f7ff;
+            color: #0077b6;
+            font-size: 32px;
+        }
+        .transfer-title {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .transfer-desc {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .transfer-btn {
+            margin-top: auto;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 0;
+            background: #0077b6;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .transfer-btn:hover, .transfer-btn:focus {
+            background: #005f93;
+            outline: none;
+        }
+        @media (max-width: 760px) {
+            .transfer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <section class="transfer-section" aria-labelledby="transfer-heading">
+        <h2 id="transfer-heading">Our Transfer Service</h2>
+        <p style="margin-top: 6px; margin-bottom: 14px; color: #444;">Professional transportation solutions for your journey. Book your taxi now!</p>
+
+        <div class="transfer-grid" role="list">
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">🚕</div>
+                <h3 class="transfer-title">Airport Transfers</h3>
+                <p class="transfer-desc">Reliable pick-up and drop-off service from Kilimanjaro International Airport.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book airport transfer">Book Your Taxi Now</button>
+            </article>
+
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">🛣️</div>
+                <h3 class="transfer-title">City Tours</h3>
+                <p class="transfer-desc">Comfortable transportation for exploring Moshi and surrounding areas.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book city tour transfer">Book Your Taxi Now</button>
+            </article>
+
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">⛰️</div>
+                <h3 class="transfer-title">Hiking Transfers</h3>
+                <p class="transfer-desc">Safe transportation to hiking trails and mountain starting points.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book hiking transfer">Book Your Taxi Now</button>
+            </article>
+
+            <article class="transfer-card" role="listitem">
+                <div class="transfer-icon" aria-hidden="true">🏨</div>
+                <h3 class="transfer-title">Hotel Transfers</h3>
+                <p class="transfer-desc">Convenient transfers between hotels and tour destinations.</p>
+                <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book hotel transfer">Book Your Taxi Now</button>
+            </article>
+        </div>
+
+        <script>
+            (function(){
+                const buttons = document.querySelectorAll('.book-taxi');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', function(){
+                        const href = this.dataset.href;
+                        if (!href) return;
+                        window.location.href = href;
+                    });
+                });
+            })();
+        </script>
+    </section>
+    <footer class="site-footer" role="contentinfo" aria-label="Footer">
+        <style>
+            .site-footer {
+                --accent: #0077b6;
+                background:rgb(28, 28, 28);
+                border-top:1px solid var(--border, #e6e6e6);
+                margin:50px 12px 36px;
+                padding:22px;
+                border-radius:10px;
+                box-shadow:0 8px 20px rgba(6,24,64,0.03);
+                font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+                color:white;
+            }
+            .footer-grid {
+                display:grid;
+                grid-template-columns: 260px 1fr 1fr 260px;
+                gap:18px;
+                align-items:start;
+            }
+            .footer-brand { display:flex; gap:12px; align-items:center; }
+            .footer-brand img { height:56px; width:auto; border-radius:6px; display:block; }
+            .footer-social { display:flex; gap:8px; margin-top:6px; }
+            .footer-social a {
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                width:40px;
+                height:40px;
+                border-radius:8px;
+                background:transparent;
+                color:white;
+                transition:background .15s, transform .12s;
+                text-decoration:none;
+            }
+            .footer-social a:hover { background:rgba(0,0,0,0.04); transform:translateY(-3px); color:var(--accent); }
+            .footer-col h4 { margin:0 0 8px; font-size:25px; color: white; }
+            .footer-links, .footer-tours { list-style:square; margin:0; padding:0; display:grid; gap:6px; }
+            .footer-links a, .footer-tours a {
+                color:white;
+                text-decoration:none;
+                padding:6px 8px;
+                border-radius:6px;
+                display:inline-block;
+                font-weight:600;
+            }
+            .footer-links a:hover, .footer-tours a:hover { color:var(--accent); background:rgba(0,119,182,0.04); }
+            .footer-contact p { margin:6px 0; font-weight:600; color:rgb(255, 255, 255); }
+            .footer-contact a { color:white; text-decoration:none; display:inline-block; margin-top:4px; }
+            .footer-bottom {
+                margin-top:18px;
+                padding-top:12px;
+                border-top:1px solid #f0f0f0;
+                display:flex;
+                flex-direction:column;
+                gap:8px;
+                align-items:center;
+                justify-content:space-between;
+            }
+            .footer-bottom .legal { font-size:0.92rem; color:white; }
+            .footer-bottom .legal a { font-size:0.92rem; color:orange; }
+            
+            @media (max-width:880px){
+                .footer-grid { grid-template-columns:1fr 1fr; }
+                .footer-brand { grid-column: span 2; }
+            }
+            @media (max-width:520px){
+                .footer-grid { grid-template-columns:1fr; }
+                .footer-brand { justify-content:flex-start; }
+                .footer-bottom { text-align:center; }
+            }
+        </style>
+
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand" aria-label="Company">
+                    <img src="img/logo-removebg-preview.png" alt="Foot On Kili logo" >
+                    <div>
+                        <strong>Foot On Kili Tanzania Adventure & Safari</strong>
+                        <div style="font-size:0.95rem;color:white;margin-top:6px;">Tanzania Adventure &amp; Safari</div>
+                        <div class="footer-social" aria-label="Social links">
+                            <a href="https://m.facebook.com/footonkilitanzaniaadventure" aria-label="Facebook" title="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.3c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.1h-1.07c-1.05 0-1.37.65-1.37 1.32v1.57h2.34l-.37 2.9h-1.97v7A10 10 0 0022 12z"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/footonkilitanzania_adventures?igsh=emhnMGd0Zml5dDd0"" aria-label="Instagram" title="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.3a4.7 4.7 0 110 9.4 4.7 4.7 0 010-9.4zm0 2a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zM17.7 6.1a.9.9 0 11-1.8 0 .9.9 0 011.8 0z"/></svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.001 5.001A2.5 2.5 0 014.98 3.5zM3 8.99h4v12H3v-12zM9 8.99h3.8v1.63h.06c.53-1 1.82-2.06 3.74-2.06 4 0 4.74 2.63 4.74 6.05v7.38h-4v-6.53c0-1.56-.03-3.57-2.17-3.57-2.17 0-2.5 1.7-2.5 3.45v6.65H9v-12z"/></svg>
+                            </a>
+                            <a href="https://x.com/footonkili360?t=EdhZIUL6MmzQMjEc57ZRxg&s=09" aria-label="Twitter" title="Twitter">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M22 5.92c-.64.28-1.32.46-2.04.54a3.56 3.56 0 001.56-1.96 7.13 7.13 0 01-2.26.86 3.53 3.53 0 00-6.02 3.22A10 10 0 013 5.43a3.53 3.53 0 001.09 4.71 3.48 3.48 0 01-1.6-.44v.04a3.53 3.53 0 002.83 3.46c-.48.13-.98.16-1.5.06a3.54 3.54 0 003.3 2.46A7.07 7.07 0 013 19.54a9.98 9.98 0 005.41 1.59c6.49 0 10.04-5.37 10.04-10.03v-.46A7.2 7.2 0 0022 5.92z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Useful links</h4>
+                <ul class="footer-links" aria-label="Useful links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" aria-label="About Us page">About Us</a></li>
+                    <li><a href="#" aria-label="Information page">Information</a></li>
+                    <li><a href="#" aria-label="Gallery page">Gallery</a></li>
+                    <li><a href="#" aria-label="Contact page">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Major Tours</h4>
+                <ul class="footer-tours" aria-label="Major tours">
+                    <li><a href="zanzibar.html">Zanzibar</a></li>
+                    <li><a href="kilimanjaro-national-park.html">Kilimanjaro National Park</a></li>
+                    <li><a href="mountain-climbing.html">Mountain Climbing</a></li>
+                    <li><a href="tanzania-safari.html">Tanzania Safari</a></li>
+                    <li><a href="old-moshi-cultural.html">Cultural tour</a></li>
+                    <li><a href="bike-kilimanjaro.html">Bike Kilimanjaro</a></li>
+                    <li><a href="kilimanjaro-helicopter.html">Kilimanjaro With Helicopter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact" aria-label="Contact information">
+                <h4>Contact Us</h4>
+                <p>Foot On Kili</p>
+                <p style="font-weight:500;color:white;font-size:0.95rem;">Address: Taifa Road, CCM Building Moshi, Tanzania</p>
+                <p>Phone: <a href="tel:+255 767 691 910">+255 767 691 910</a></p>
+                <p>Email: <a href="mailto:info@footonkilitanzaniaadventure.com">info@footonkilitanzaniaadventure.com</a></p>
+                <div style="margin-top:10px;color:white;font-size:0.95rem;"></div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="legal" aria-hidden="false">
+                Copyright <span id="copyright-year"></span> &copy; <a href="index.html">Foot On Kili Tanzania Adventure & Safari</a> All rights reserved.
+            </div>
+        </div>
+
+        <script>
+            (function(){
+                var el = document.getElementById('copyright-year');
+                if (el) el.textContent = new Date().getFullYear();
+            })();
+        </script>
+    </footer></a>
 </body>
