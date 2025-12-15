@@ -18,7 +18,7 @@
                 --border:#e6e6e6;
                 --text:#222;
             }
-            body{
+              body{
                 font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
             }
 
@@ -339,7 +339,9 @@
             })();
         </script>
     </header>
-     <section class="zanzibar-section" aria-label="Zanzibar hero and details">
+    
+</body>
+<section class="zanzibar-section" aria-label="Zanzibar hero and details">
         <style>
             /* Slider */
             .zanzibar-section { margin:20px 12px 60px; font-family:inherit; }
@@ -451,14 +453,14 @@
 
         <div class="slider" id="zanzibarSlider" aria-roledescription="carousel">
             <div class="slide active" role="img" aria-label="Zanzibar beach sunrise"
-                 style="background-image:url('img/destination-2.jpg');"></div>
+                 style="background-image:url('img/mountainclimbing.jpg');"></div>
             <div class="slide" role="img" aria-label="Zanzibar spice market"
-                 style="background-image:url('img/destination-4.jpg');"></div>
+                 style="background-image:url('img/climbing-mount-meru2.jpg');"></div>
             <div class="slide" role="img" aria-label="Zanzibar stone town"
-                 style="background-image:url('img/carousel-1.jpg');"></div>
+                 style="background-image:url('img/Mountain-Climbing.png');"></div>
 
             <div class="overlay" aria-hidden="true">
-                <div class="slider-title">Itinerary</div>
+                <div class="slider-title">MOUNT KILIMANJARO DAY TRIP </div>
             </div>
 
             <button class="ctrl prev" aria-label="Previous slide" title="Previous">
@@ -473,7 +475,85 @@
             </button>
         </div>
 
-       
+        <div class="tabs" role="tablist" aria-label="Zanzibar details tabs">
+            <button role="tab" aria-selected="true" aria-controls="overview" id="tab-overview">Overview</button>
+            <button role="tab" aria-selected="false" aria-controls="itinerary" id="tab-itinerary">Itinerary</button>
+            <button role="tab" aria-selected="false" aria-controls="additional" id="tab-additional">Additional info</button>
+        </div>
+
+        <div class="panels">
+            <div id="overview" class="panel active" role="tabpanel" aria-labelledby="tab-overview">
+                <h3 style="margin-top:0">Overview</h3>
+               <strong>MOUNT KILIMANJARO DAY TRIP (NO SUMMIT)</strong><br> <strong>Mount Kilimanjaro Day Tour from Moshi or Arusha</strong><br><br>
+
+A Mount Kilimanjaro day trip is the perfect option for travelers who want to experience Africa’s highest mountain without committing to a multi-day summit climb.<br>
+This Kilimanjaro day tour is ideal for short stays, families, beginners, and visitors who want to hike through nature and return on the same day.<br>
+Enjoy breathtaking scenery, rich wildlife, and cultural insights while exploring the lower slopes of Mount Kilimanjaro, a UNESCO World Heritage Site.<br><br>
+            </div>
+
+            <div id="itinerary" class="panel" role="tabpanel" aria-labelledby="tab-itinerary">
+                <h3 style="margin-top:0">Itinerary</h3>
+                <strong>What to Expect on a Mount Kilimanjaro Day Trip</strong><br>
+Guided hike on the lower slopes of Mount Kilimanjaro<br>
+Walk through lush montane rainforest zones<br>
+See giant trees, black-and-white colobus monkeys, and diverse birdlife<br>
+Learn about Chagga culture, local traditions, flora, and fauna<br>
+No technical climbing required and suitable for beginners<br>
+Return to Moshi or Arusha the same afternoon<br><br>
+
+<strong>Popular Mount Kilimanjaro Day Trip Routes</strong><br><br>
+
+<strong>Marangu Route Day Trip (Most Popular)</strong><br>
+Starting point at Marangu Gate (1,870 meters)<br>
+Hike to Mandara Hut (2,700 meters)<br>
+Approximate distance of 8 km round trip<br>
+Duration of 4 to 6 hours<br>
+Highlights include dense rainforest and Maundi Crater viewpoint<br>
+Best option for first-time Kilimanjaro hikers<br><br>
+
+<strong>Machame Route Day Trip</strong><br>
+Starting point at Machame Gate<br>
+More scenic and quieter trail compared to Marangu Route<br>
+Steeper path with very green and dense rainforest<br>
+Duration of approximately 5 to 6 hours<br>
+Best for active hikers and photography lovers<br><br>
+
+<strong>Rongai Route Day Trip</strong><br>
+Located on the northern side of Mount Kilimanjaro<br>
+Drier landscape with fewer crowds<br>
+Excellent views toward Kenya<br>
+Best route during the rainy season<br><br>
+            </div>
+
+            <div id="additional" class="panel" role="tabpanel" aria-labelledby="tab-additional">
+                <h3 style="margin-top:0">Additional info</h3>
+               <strong>What’s Usually Included in a Kilimanjaro Day Trip</strong><br>
+Professional and licensed mountain guide<br>
+Kilimanjaro National Park entrance and conservation fees<br>
+Round-trip transport from Moshi or Arusha<br>
+Packed lunch<br>
+Drinking water during the hike<br><br>
+
+<strong>Not Included</strong><br>
+Tips for the mountain guide<br>
+Personal hiking gear and equipment<br>
+Travel and medical insurance<br><br>
+
+<strong>What to Bring for Your Kilimanjaro Day Hike</strong><br>
+Comfortable hiking shoes or sturdy sneakers<br>
+Light rain jacket or windbreaker<br>
+Warm layer for higher elevation<br>
+Small daypack<br>
+Camera or mobile phone for photos<br>
+Sunscreen and personal essentials<br><br>
+
+<strong>Is a Mount Kilimanjaro Day Trip Worth It?</strong><br>
+Absolutely, this day hike allows you to step inside a UNESCO World Heritage Site<br>
+Experience the beauty, atmosphere, and ecosystems of Mount Kilimanjaro<br>
+Enjoy a rewarding adventure without long-term commitment<br>
+Get a perfect introduction to Kilimanjaro before planning a future summit climb<br><br>
+            </div>
+        </div>
 
         <script>
             (function(){
@@ -542,467 +622,7 @@
             })();
         </script>
     </section></div></svg></button></svg></button></div></section>
-    <section class="itinerary-section" aria-label="Kilimanjaro routes and itineraries">
-        <style>
-            .itinerary-section { margin:20px 12px 60px; font-family:inherit; }
-            .itinerary-grid {
-                display:grid;
-                grid-template-columns:repeat(3, 1fr);
-                gap:16px;
-                align-items:stretch;
-                margin-bottom:18px;
-            }
-            .itinerary-grid button {
-                appearance:none;
-                -webkit-appearance:none;
-                border:1px solid var(--border);
-                background:#fff;
-                padding:20px 16px;
-                font-size:18px;
-                font-weight:700;
-                border-radius:12px;
-                cursor:pointer;
-                color:var(--text);
-                box-shadow:0 6px 18px rgba(6,24,64,0.04);
-                transition:transform .12s, background .12s, color .12s;
-                text-align:center;
-            }
-            .itinerary-grid button:hover { transform:translateY(-4px); }
-            .itinerary-grid button[aria-selected="true"] {
-                background:linear-gradient(90deg, var(--accent), #006494);
-                color:#fff;
-                transform:translateY(-2px);
-                border-color:transparent;
-            }
-
-            /* Panels */
-            .itinerary-panels {
-                background:#fff;
-                border:1px solid var(--border);
-                border-radius:10px;
-                padding:18px;
-                box-shadow:0 10px 30px rgba(6,24,64,0.04);
-                min-height:120px;
-            }
-            .itinerary-panels .panel { display:none; color:#222; line-height:1.5; font-weight:500; }
-            .itinerary-panels .panel.active { display:block; }
-            .panel .close {
-                float:right;
-                background:transparent;
-                border:0;
-                font-size:18px;
-                cursor:pointer;
-                color:#666;
-            }
-
-            /* Responsive: 2 columns then 1 */
-            @media (max-width:1000px){ .itinerary-grid { grid-template-columns:repeat(2,1fr); } }
-            @media (max-width:600px){ .itinerary-grid { grid-template-columns:1fr; } .itinerary-grid button{ font-size:16px; padding:16px; } }
-        </style>
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
-
-        .itinerary-heading{
-            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-            font-weight: 800;
-            font-size: 34px;
-            text-align: center;
-            margin: 18px 0;
-            padding: 8px 12px;
-            /* Gradient text for eye-catching look */
-            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 0.4px;
-            position: relative;
-        }
-
-        /* Decorative underline / accent */
-        .itinerary-heading::after{
-            content: "";
-            display: block;
-            width: 96px;
-            height: 6px;
-            margin: 12px auto 0;
-            border-radius: 6px;
-            background: linear-gradient(90deg, #0077b6, #00b4d8);
-            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
-        }
-
-        /* Responsive tweaks */
-        @media (max-width: 700px) {
-            .itinerary-heading { font-size: 24px; }
-            .itinerary-heading::after { width: 72px; height: 5px; }
-        }
-        </style>
-
-        <h2 class="itinerary-heading">Itinerary</h2>
-     <section></section>   
-<div class="itinerary-grid" role="tablist">
-    <button role="tab" aria-selected="true" aria-controls="panel-moshi">Moshi Tour</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-marangu">Marangu Village Tour</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-materuni">Materuni Waterfalls</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-oldmoshi">Old Moshi Cultural Tour</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-bike">Moshi Tour With Bike</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-chala">Lake Chala</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-kikuletwa">Kikuletwa Hotsprings</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-olpopongi">Olpopongi Maasai Cultural Village</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-safari">Kilimanjaro Safari Group Joining</button>
-</div>
-
-<div class="itinerary-panels">
-    <div id="panel-moshi" class="panel active" role="tabpanel">
-        <img src="img/MOSHI-TOWN.jpg" alt="Moshi Tour" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:12px;">
-        <img src="img/MOSHI-TOWN1.jpg" alt="Moshi Tour" style="width:100%;max-width:285px;border-radius:8px;margin-bottom:12px;">
-        <br><strong>ABOUT MOSHI</strong><br> <br>
-Moshi town is located in the Kilimanjaro region of northern Tanzania, at the base of the world’s highest free-standing mountain and Africa’s tallest peak, Mount Kilimanjaro.<br>
-This tour was designed to give visitors a deeper understanding of local culture, economic activities, and to provide opportunities to purchase unique souvenirs as memories of Tanzania.<br>
-What makes this experience special is visiting vibrant local markets, historical sites such as churches, mosques, and railway stations, exploring Tanzanite gemstone shops (exclusive to Tanzania), and enjoying dramatic views of Mount Kilimanjaro.<br> <br> <strong>ITINERARY</strong><br>
-
-* Pick up from hotel, station, or airport at 09:00 am and drive to the center of town.<br>
-* Walking tour of the local market, railway station, churches, and mosques for approximately 2 hours.<br>
-* Visit souvenir and Tanzanite shops, followed by a coffee plantation located 3 km from town.<br>
-* Enjoy local food and a glass of wine at a local restaurant before returning to your hotel or station.<br>
-
-  <br>
-
-This itinerary is flexible and can be customized to meet your interests.<br> <br> <strong>MEETING POINT & TOUR DURATION</strong><br>
-
-* Meeting Point Options: Rail or Bus Station, Airport, Hotel, Address or Intersection, Monument/Building<br>
-* Duration: 4 hours<br>
-
-  <br>
-
-<strong>TRANSPORTATION</strong><br>
-
-* Town tour is primarily by walking.<br>
-* Private car transportation is provided from your stay to town and back, using a comfortable, air-conditioned Toyota Alphard V.<br>
-
-  <br>
-
-<strong>WHAT’S INCLUDED</strong><br>
-
-* Guiding services<br>
-* Private transportation<br>
-* Airport transfers<br>
-
-  <br>
-
-<strong>ESTIMATED LOCAL CASH NEEDED</strong><br>
-
-* Approximately 50,000 Tsh for lunch or small purchases. Some restaurants may not accept credit cards.<br>
-* Credit cards can be used for souvenirs and Tanzanite gemstone purchases.<br>
-
-  <br>
-
-<strong>WHAT’S EXTRA</strong><br>
-
-* Personal expenses<br>
-* Souvenirs<br>
-* Food, drinks, snacks<br>
-
-  <br>
-
-<strong>RESTRICTIONS</strong><br>
-
-* No specific tourism restrictions apply for this tour in Tanzania.<br>
-    </div>
-
-    <div id="panel-marangu" class="panel" role="tabpanel">
-        <img src="img/marangu.jpg" alt="Marangu Village Tour" style="width:100%;max-width:380px;border-radius:8px;margin-bottom:12px;">
-         <img src="img/maramgu.jpg" alt="Marangu Village Tour" style="width:100%;max-width:590px;border-radius:8px;margin-bottom:12px;">
-       <br><strong>MARANGU VILLAGE TOUR</strong><br> <br>
-Explore the slopes of Mount Kilimanjaro and immerse yourself in the rich history and culture of the Chagga people.<br>
-Pass through traditional Chagga villages and visit local coffee farms, where you can learn the full process of coffee production – from tree to cup.<br>
-Discover the unique Chagga farming terraces, taste authentic local food, and enjoy locally brewed banana beer.<br>
-Visit colorful local markets to see fresh produce, including a variety of bananas, and experience the daily life of the Chagga community.<br>
-End your tour at a scenic waterfall, gaining insight into the Chagga way of life and their traditions.<br> <br> <strong>OUR PACKAGE INCLUDES:</strong><br>
-
-* Transport<br>
-* Village fees<br>
-* Professional guide<br>
-* Lunch<br>
-* 1.5L bottle of water<br>
-* Banana wine & beer tasting<br>
-
-  <br>
-
-<strong>NOT INCLUDED:</strong><br>
-
-* Personal items<br>
-* Gratuities/tips for the mountain guide<br>
-* Soda & alcoholic beverages at lunch<br>
-    </div>
-
-    <div id="panel-materuni" class="panel" role="tabpanel">
-        <img src="img/materuni-waterfalls-beautiful.jpg" alt="Materuni Waterfalls" style="width:100%;max-width:400px;border-radius:8px;margin-bottom:12px;">
-         <img src="img/materuni-waterfalls-beautiful.jpg" alt="Materuni Waterfalls" style="width:100%;max-width:400px;border-radius:8px;margin-bottom:12px;">
-       <br><strong>MATERUNI WATERFALLS TOUR</strong><br> <br>
-Experience a refreshing escape from town life with a visit to Materuni Village and Waterfalls, perfect for preparing for or recovering from a Kilimanjaro climb.<br>
-Begin with a scenic walk to Materuni Waterfall, where you will see local fruits such as avocados, mangos, lemons, and bananas growing, and learn about the village’s history, traditions, economy, and cultural life.<br>
-At the waterfall, take a dip in the natural pool – swimsuits are recommended for this refreshing experience.<br>
-Continue the tour with a visit to the nearby coffee plantations. The villagers will demonstrate the entire coffee-making process, from harvesting the beans to roasting and brewing, allowing you to sing and dance along with the Chagga people.<br>
-Enjoy a traditional Chagga lunch served by the villagers.<br> <br> <strong>Region:</strong> Kilimanjaro<br> <strong>Duration:</strong> 5-6 hours<br> <strong>Distance:</strong> 5 km<br> <strong>What to bring:</strong> Sneakers, swimsuit, towel<br> <br> <strong>INCLUDED IN COST:</strong><br>
-
-* Transfer from Moshi and back<br>
-* Entry ticket<br>
-* Guided tour of coffee plantation, waterfall, and local village<br>
-* Lunch<br>
-* Soft drinks and water<br>
-
-  <br>
-
-<strong>NOT INCLUDED:</strong><br>
-
-* Tips for the guide (optional – USD 10 per group)<br>
-    </div>
-
-    <div id="panel-oldmoshi" class="panel" role="tabpanel">
-        
-         <img src="img/cultural.jpg" alt="Old Moshi Cultural Tour" style="width:100%;max-width:400px;border-radius:8px;margin-bottom:12px;">
-       <br><strong>OLD MOSHI CULTURAL TOUR</strong><br> <br>
-A place where History, Culture, and Natural Beauty Meet!<br> <br>
-Join us for an unforgettable adventure in the ancient village of Old Moshi.<br>
-Discover the history of the German slave trade in Tanzania and its impact on this beautiful region.<br>
-Learn how coffee is grown and processed while enjoying the stunning mountainside community.<br> <br> <strong>HISTORY</strong><br>
-Old Moshi, located in the Kilimanjaro region, is home to Mangi Meli-one, one of the famous Chagga Chiefs who ruled the area before and during colonial times.<br> <br> <strong>CULTURE</strong><br>
-Explore the daily life of villagers, including banana farms, medicinal plants, and beekeeping.<br>
-Visit a local blacksmith, dispensary, and school to gain insight into community life.<br> <br> <strong>TOUR PACKAGES</strong><br> <br> <strong>One-Day Tour Package</strong><br>
-This full-day tour takes you through the picturesque countryside surrounding Mount Kilimanjaro, filled with banana and coffee farms.<br>
-Learn about local farming practices, the Chagga way of life, and the traditional chiefdom system.<br>
-Explore historical sites with stories dating back to pre-German colonization.<br>
-Key sites include:<br>
-
-* The tree where Mangi (Chief) Meli was hanged by the Germans in 1900<br>
-* The palace of the chief<br>
-* German military base from the 1890s<br>
-* Cemetery and old slave market ruins<br>
-
-  <br>
-
-Enjoy local banana beer and choose to visit a local school or dispensary.<br>
-In the afternoon, savor a traditional lunch prepared by village mamas, followed by a scenic hike to Mambori Waterfalls.<br>
-Your guide will share the history behind Mambori Waterfalls and explain the medicinal uses of local plants along the route.<br> <br> <strong>Two-Day / One-Night Tour Package</strong><br>
-After the full-day tour, enjoy a home-cooked dinner and spend the night at your choice of accommodation: camping, homestay, or nearby Keys Hotel.<br> <br>
-The next morning, visit Kitimbirihu, where German missionaries first preached Christianity and baptized locals around 1885.<br>
-Hike to Kidia Lutheran Church, an original stone church built by German missionaries, and visit Kidia Dispensary to learn about Doctor Bruno Gutman.<br>
-Enjoy a local lunch, with the option to participate in its preparation.<br>
-The tour concludes with a visit to a coffee, vanilla, and spice farm to learn the step-by-step process of harvesting, drying, roasting, and grinding coffee, followed by a tasting of organic coffee and vanilla tea.<br> <br> <strong>German Military Base and Slave Quarters Tour (2–3 hours)</strong><br>
-Old Moshi was home to the German military during colonial rule from 1885–1919.<br>
-Join your guide for a tour of these historical sites and learn about German colonial rule and the local resistance.<br>
-    </div>
-
-    <div id="panel-bike" class="panel" role="tabpanel">
-        <img src="img/bike1.jpg" alt="Moshi Tour With Bike" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:12px;">
-         <img src="img/bike2.jpg" alt="Moshi Tour With Bike" style="width:100%;max-width:400px;border-radius:8px;margin-bottom:12px;">
-        <br><strong>Explore Moshi Tour with the Bike</strong><br>
-
-
-Experience the slopes of Mount Kilimanjaro and the Kilimanjaro region like never before – on two wheels!<br>
-Our Tanzania Biking Tours offer day trips to week-long adventures across the Northern Circuit, taking you through lush forests, dry bushlands, remote villages, bustling towns, lakeside shores, and fertile plantations.<br><br>
-
-Cycle past breathtaking scenery, feel the cool winds on Kilimanjaro’s slopes, and discover the vibrant culture of the Chagga and Maasai people.<br>
-Our itineraries are flexible and tailored to your personal interests and adventure level.<br><br>
-
-<strong>Sample Biking Tours</strong><br><br>
-
-<strong>1. Bike Tour Combined with Hot Springs</strong><br>
-Cycle through semi-desert villages and enjoy panoramic mountain views.<br>
-Visit Rundugai Village and the Maasai market to experience local culture.<br>
-Ride to Kilkuletwa Hot Springs, relax, and enjoy a delicious lunch.<br> <strong>Distance:</strong> 17 km<br> <strong>Highlights:</strong> Mountain scenery, hot springs, Maasai culture<br><br>
-
-<strong>2. Bike Tour Combined with Waterfalls and Coffee Tour</strong><br>
-Cycle to Materuni Village (1,800 m), a lush rainforest known for premium coffee.<br>
-Visit a small coffee farm, learn the coffee processing and roasting process, and enjoy a fresh cup.<br>
-Hike to Materuni Waterfalls and swim in the natural pool.<br>
-Enjoy views of Mount Kilimanjaro and taste a traditional Chagga brew.<br> <strong>Distance:</strong> 14 km (10 km uphill)<br> <strong>Highlights:</strong> Coffee experience, waterfall hike, Kilimanjaro views, local culture<br><br>
-
-<strong>3. Bike Tour Combined with Canoe and Bird Watching</strong><br>
-Cycle through the Lake Chala area and scenic highlands, taking in views of Himo and Holili.<br>
-End the ride with canoeing and bird watching.<br>
-Return to Moshi by vehicle.<br> <strong>Distance:</strong> 25 km<br> <strong>Highlights:</strong> Canoe & bird watching, scenic highlands, city and nature views<br><br>
-
-<strong>4. Kilimanjaro Shira Plateau Day Trip</strong><br>
-Designed for experienced cyclists or mountain bikers seeking a challenge.<br>
-Cycle through forest, heath, and moorland zones on the Shira Plateau.<br>
-Spot primates and larger wildlife while enjoying breathtaking views of Kibo Peak.<br> <strong>Duration:</strong> 7–9 hrs<br> <strong>Path:</strong> Dirt & gravel road<br> <strong>Distance:</strong> 47 km<br> <strong>Itinerary:</strong> Start at Londorossi Gate, cycle to the Shira Plateau helipad, then enjoy a downhill ride back.<br> <strong>Highlights:</strong> High-altitude cycling, wildlife spotting, stunning Kilimanjaro scenery<br><br>
-
-<strong>Price Includes</strong><br>
-English-speaking cycling guide<br>
-Meals as mentioned in the itinerary<br>
-Bottled mineral water<br>
-Packed lunch<br>
-Helmets<br><br>
-
-<strong>Price Excludes</strong><br>
-Tips<br>
-Add-on tours & activities<br>
-Private expenses<br>
-Accommodation<br><br>
-
-This tour is perfect for adventure enthusiasts who want to actively explore Kilimanjaro and the surrounding villages while fully immersing themselves in local culture.<br>
-    </div>
-
-    <div id="panel-chala" class="panel" role="tabpanel">
-        <img src="img/lakechala.jpg" alt="Lake Chala" style="width:100%;max-width:400px;border-radius:8px;margin-bottom:12px;">
-        
-       <br><strong>LAKE CHALA DAY TRIP</strong><br> 
-
-<br><strong>Overview:</strong><br>
-Lake Chala is a stunning caldera lake formed around 250,000 years ago, located 8 km from Taveta near the Kenya-Tanzania border.<br>
-Fed by Kilimanjaro’s underground water, it is one of Tanzania’s deepest inland lakes.<br>
-Surrounded by myths and legends—including tales of a Maasai village that vanished into the lake—Lake Chala offers a serene, off-the-beaten-path experience away from the usual tourist attractions.<br><br>
-
-Depending on the season, the lake’s color ranges from deep blue to turquoise or green.<br>
-The area supports unique flora and fauna including:<br> <strong>Birds:</strong> 200 species, including birds of prey<br> <strong>Mammals:</strong> Colobus monkeys, blue monkeys, baboons, dik-dik, kudu, occasional migrant elephants<br> <strong>Reptiles:</strong> Pythons, monitor lizards<br><br>
-
-<strong>Itinerary: Day Trip from Moshi</strong><br> <strong>Travel Time:</strong> 1 hour (55 km from Moshi)<br> <strong>Pick-Up:</strong> Professional naturalist guide/driver at your lodge<br> <strong>Briefing:</strong> Short safari and activity introduction<br><br>
-
-<strong>Activities:</strong> (Choose according to your interest)<br>
-
-1. <strong>Bush Walk:</strong> 2–4 hours along rocky gullies and scenic paths with Kilimanjaro in the background.<br>
-2. <strong>Canoeing:</strong> 1-hour paddle on the lake.<br>
-3. <strong>Fishing:</strong> Target Lake Chala tilapia (catch and release only, as it is an endangered species).<br>
-4. <strong>Swimming:</strong> Safe near the shore; caution due to a 70-meter drop-off in deeper areas.<br><br>
-
-<strong>Lunch:</strong> Enjoy a meal at Lake Chala Lodge with panoramic views of the lake and Kilimanjaro (on clear days).<br><br>
-
-<strong>Return:</strong> In the evening, transfer back to your lodge in Moshi.<br><br>
-
-<strong>Highlights:</strong><br>
-
-* Remote and peaceful natural setting<br>
-* Stunning Kilimanjaro backdrop<br>
-* Unique wildlife and flora<br>
-* Optional canoeing, swimming, fishing, or bushwalk<br><br>
-
-<strong>Tip:</strong> Bring sneakers, swimwear, sun protection, and water for the bushwalk.<br>
-    </div>
-
-    <div id="panel-kikuletwa" class="panel" role="tabpanel">
-        <img src="img/SAFARI-TANZANIA1.png" alt="Kikuletwa Hotsprings" style="width:100%;max-width:300px;border-radius:8px;margin-bottom:12px;">
-        
-        <br><strong>KIKULETWA (CHEMKA) HOT SPRINGS TOUR</strong><br>
-
-<strong>Overview:</strong><br>
-Kikuletwa, also known as Chemka Hot Springs or Maji Moto, is a paradisiacal oasis located amidst the Tanzanian savannah.<br>
-It offers crystal-clear water, lush vegetation, and breathtaking scenery reminiscent of tropical resorts.<br>
-Situated approximately a 2-hour drive from Moshi, the main climbing hub of Kilimanjaro, Chemka Hot Springs is the perfect destination to relax after a Kilimanjaro hike or a safari adventure.<br>
-This unique natural phenomenon occurs where underground water interacts with geothermal sources, creating a series of small warm lakes with continuously flowing, pristine water.<br><br>
-
-<strong>Region:</strong> Kilimanjaro<br> <strong>Distance from Moshi:</strong> 70 km<br> <strong>Duration:</strong> 5–6 hours<br> <strong>What to Bring:</strong> Swimming suit, sun protection, and a towel<br><br>
-
-<strong>Tour Activities:</strong><br>
-
-* Swim in crystal-clear hot springs<br>
-* Enjoy the lush surroundings and tropical vegetation<br>
-* Relax and take in the serene natural environment<br>
-* Optional picnic lunch amidst the oasis<br><br>
-
-<strong>Included in Cost:</strong><br>
-
-* Round-trip transfer from Moshi<br>
-* Entry ticket to Chemka Hot Springs<br>
-* Picnic lunch<br>
-* Soft drinks and bottled water<br><br>
-
-<strong>Not Included:</strong><br>
-
-* Personal hygiene items<br>
-* Any additional personal expenses<br><br>
-
-<strong>Tip:</strong> Bring your swimming suit, sunscreen, and a camera to capture the stunning scenery.<br>
-
-Feel free to contact our experts to book your Chemka Hot Springs adventure and enjoy a day in this natural Tanzanian paradise!<br>
-    </div>
-
-    <div id="panel-olpopongi" class="panel" role="tabpanel">
-        <img src="img/old-mushi-cultural-tour.jpg" alt="Olpopongi Maasai Cultural Village" style="width:100%;max-width:400px;border-radius:8px;margin-bottom:12px;">
-        
-        <br><strong>Olpopongi Maasai Cultural Tour</strong><br>
-Experience the authentic lifestyle of the Maasai people with a visit to Olpopongi Maasai Cultural Village, located near Mount Kilimanjaro. This unique cultural tour offers an immersive insight into Maasai traditions, customs, and daily life in a natural and welcoming setting. Learn about traditional Maasai houses (bomas), clothing, jewelry, and the importance of livestock in their culture.<br>
-<br>
-
-During the tour, you will enjoy storytelling, traditional songs and dances, and demonstrations of Maasai skills such as fire-making and spear throwing. The experience also includes a guided village walk and a traditional Maasai meal prepared using local ingredients, giving you a deeper understanding of their heritage and way of life.<br>
-<br>
-
-<strong>Plan Your Cultural Experience</strong><br>
-If you would like to visit Olpopongi Maasai Cultural Village or include this tour in your Tanzania itinerary, <strong>contact us</strong> today and we will arrange an authentic and memorable cultural experience for you.<br>
-    </div>
-
-   
-</div>
-
-<script>
-    (function(){
-        const tabButtons = Array.from(document.querySelectorAll('.itinerary-grid [role="tab"]'));
-        const panels = Array.from(document.querySelectorAll('.itinerary-panels .panel'));
-
-        tabButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                tabButtons.forEach(b => b.setAttribute('aria-selected', 'false'));
-                btn.setAttribute('aria-selected', 'true');
-
-                const target = document.getElementById(btn.getAttribute('aria-controls'));
-                panels.forEach(p => p.classList.remove('active'));
-                target.classList.add('active');
-            });
-
-            btn.addEventListener('keydown', (e) => {
-                const curIndex = tabButtons.indexOf(document.activeElement);
-                if (e.key === 'ArrowRight') {
-                    tabButtons[(curIndex + 1) % tabButtons.length].focus();
-                    tabButtons[(curIndex + 1) % tabButtons.length].click();
-                    e.preventDefault();
-                } else if (e.key === 'ArrowLeft') {
-                    tabButtons[(curIndex - 1 + tabButtons.length) % tabButtons.length].focus();
-                    tabButtons[(curIndex - 1 + tabButtons.length) % tabButtons.length].click();
-                    e.preventDefault();
-                }
-            });
-        });
-    })();
-</script>
- <style>
-         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
-
-        .itinerary-heading{
-            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-            font-weight: 800;
-            font-size: 34px;
-            text-align: center;
-            margin: 36px 0;
-            padding: 8px 12px;
-            /* Gradient text for eye-catching look */
-            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 0.4px;
-            position: relative;
-        }
-
-        /* Decorative underline / accent */
-        .itinerary-heading::after{
-            content: "";
-            display: block;
-            width: 96px;
-            height: 6px;
-            margin: 12px auto 0;
-            border-radius: 6px;
-            background: linear-gradient(90deg, #0077b6, #00b4d8);
-            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
-        }
-
-        /* Responsive tweaks */
-        @media (max-width: 700px) {
-            .itinerary-heading { font-size: 24px; }
-            .itinerary-heading::after { width: 72px; height: 5px; }
-        }
-        </style>
-
-         <footer class="site-footer" role="contentinfo" aria-label="Footer">
+      <footer class="site-footer" role="contentinfo" aria-label="Footer">
         <style>
             .site-footer {
                 --accent: #0077b6;

@@ -201,7 +201,7 @@
                     <li role="none"><a role="menuitem" href="index.html">Home</a></li>
 
                     <li role="none">
-                        <button aria-haspopup="true" aria-expanded="false">About Us ▾</button>
+                        <button aria-haspopup="true"  data-href="about.html"  aria-expanded="false">About Us ▾</button>
                         <ul class="dropdown-menu" role="menu" aria-label="About Us submenu">
                             <li role="none"><a role="menuitem" href="gallery.html">Gallery</a></li>
                             <li role="none"><a role="menuitem" href="information.html">Information</a></li>
@@ -625,8 +625,9 @@
             <p>Foot On Kili Tanzania Adventure & Safari is your premier travel partner with over 20 years of experience in crafting unforgettable journeys across Tanzania.</p>
             <p>We specialize in Kilimanjaro climbing expeditions, safari adventures, and cultural tours. Our expert guides and carefully planned itineraries ensure safety, comfort, and authentic experiences.</p>
             <p>Whether you're seeking the thrill of summit attempts, wildlife encounters, or cultural immersion, we deliver personalized service with one-window convenience.</p>
+            <button class="detail-btn tour-detail" data-href="about.html" aria-label="Open Machame details">Click for more details</button>
         </div>
-        <img class="about-image" src="img/blog-1.jpg" alt="Foot On Kili Tanzania team and experience" />
+        <img class="about-image" src="img/aboutcompany.jpg" alt="Foot On Kili Tanzania team and experience" />
     </div>
 </section>
    <style>
@@ -871,7 +872,7 @@
 
         <div class="tours-grid" role="list">
             <article class="tour-card" role="listitem" aria-label="Zanzibar tour">
-                <img class="tour-image" src="img/zanzibar.jpg" alt="Zanzibar beach" />
+                <img class="tour-image" src="img/zanzibar1.jpg" alt="Zanzibar beach" />
                 <div class="tour-body">
                     <h3 class="tour-title">Zanzibar</h3>
                     <p class="tour-desc">Beach paradise, spice tours and historic Stone Town.</p>
@@ -882,7 +883,7 @@
             </article>
 
             <article class="tour-card" role="listitem" aria-label="Kilimanjaro National Park tour">
-                <img class="tour-image" src="img/kilimanjaro-national-park.jpg" alt="Kilimanjaro National Park landscape" />
+                <img class="tour-image" src="img/nationalpark.jpg" alt="Kilimanjaro National Park landscape" />
                 <div class="tour-body">
                     <h3 class="tour-title">Kilimanjaro National Park</h3>
                     <p class="tour-desc">Park highlights, wildlife and basecamp experiences.</p>
@@ -893,7 +894,7 @@
             </article>
 
             <article class="tour-card" role="listitem" aria-label="Mountain Climbing tour">
-                <img class="tour-image" src="img/mountain-climbing.jpg" alt="Mountain climbing" />
+                <img class="tour-image" src="img/mountainclimbing.jpg" alt="Mountain climbing" />
                 <div class="tour-body">
                     <h3 class="tour-title">Mountain Climbing</h3>
                     <p class="tour-desc">Guided climbs, gear and acclimatization plans.</p>
@@ -904,7 +905,7 @@
             </article>
 
             <article class="tour-card" role="listitem" aria-label="Tanzania Safari tour">
-                <img class="tour-image" src="img/tanzania-safari.jpg" alt="Tanzania safari" />
+                <img class="tour-image" src="img/tanzania-wild-safari.png" alt="Tanzania safari" />
                 <div class="tour-body">
                     <h3 class="tour-title">Tanzania Safari</h3>
                     <p class="tour-desc">Game drives, Serengeti, Ngorongoro and luxury camps.</p>
@@ -915,7 +916,7 @@
             </article>
 
             <article class="tour-card" role="listitem" aria-label="Old Mushi Cultural Tour">
-                <img class="tour-image" src="img/old-mushi-cultural-tour.jpg" alt="Old Mushi cultural tour" />
+                <img class="tour-image" src="img/cultural.jpg" alt="Old Mushi cultural tour" />
                 <div class="tour-body">
                     <h3 class="tour-title">Old Mushi Cultural Tour</h3>
                     <p class="tour-desc">Local village visits, traditions and cultural activities.</p>
@@ -926,7 +927,7 @@
             </article>
 
             <article class="tour-card" role="listitem" aria-label="Bike Kilimanjaro tour">
-                <img class="tour-image" src="img/bike-kilimanjaro.jpg" alt="Bike Kilimanjaro" />
+                <img class="tour-image" src="img/bike1.jpg" alt="Bike Kilimanjaro" />
                 <div class="tour-body">
                     <h3 class="tour-title">Bike Kilimanjaro</h3>
                     <p class="tour-desc">Cycling routes around Kilimanjaro foothills and trails.</p>
@@ -937,12 +938,65 @@
             </article>
 
             <article class="tour-card" role="listitem" aria-label="Kilimanjaro With Helicopter tour">
-                <img class="tour-image" src="img/kilimanjaro-with-helicopter.jpg" alt="Kilimanjaro helicopter" />
+                <img class="tour-image" src="img/helicopter.jpg" alt="Kilimanjaro helicopter" />
                 <div class="tour-body">
                     <h3 class="tour-title">Kilimanjaro With Helicopter</h3>
                     <p class="tour-desc">Scenic helicopter transfers and aerial views of Kilimanjaro.</p>
                     <div class="tour-actions">
                         <button class="detail-btn tour-detail" data-href="kilimanjaro-helicopter.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Honeymoon Tour">
+                <img class="tour-image" src="img/honeymoon.jpg" alt="Kilimanjaro helicopter" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Honeymoon Tour</h3>
+                    <p class="tour-desc">Plan your Honeymoon tour with us.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="honeymoon.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="ZIPLINE TOUR MTO WA MBU">
+                <img class="tour-image" src="img/zipline.jpg" alt="Kilimanjaro helicopter" />
+                <div class="tour-body">
+                    <h3 class="tour-title">ZIPLINE TOUR MTO WA MBU</h3>
+                    <p class="tour-desc">Enjoy Zipline full of Adventure.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="zipline.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" role="listitem" aria-label="Kilimanjaro With Helicopter tour">
+                <img class="tour-image" src="img/Kilimanjaro-Full-moon.jpeg" alt="Kilimanjaro helicopter" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Southern Circuit safari</h3>
+                    <p class="tour-desc">Enjoy Southern Circuit Safari.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="southern.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
+                    </div>
+                </div>
+            </article>
+             <article class="tour-card" role="listitem" aria-label="Kilimanjaro With Helicopter tour">
+                <img class="tour-image" src="img/Kilimanjaro-Western-Breach.jpg" alt="Kilimanjaro helicopter" />
+                <div class="tour-body">
+                    <h3 class="tour-title">Western Circuit safari </h3>
+                    <p class="tour-desc">Western Circuit safari .</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="western.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
+                    </div>
+                </div>
+            </article>
+             <article class="tour-card" role="listitem" aria-label="MOUNT KILIMANJARO DAY TRIP">
+                <img class="tour-image" src="img/dayclimbing.jpg" alt="Kilimanjaro helicopter" />
+                <div class="tour-body">
+                    <h3 class="tour-title">MOUNT KILIMANJARO DAY TRIP </h3>
+                    <p class="tour-desc">Enjoy Senic Day trip toward mount kilimanjaro.</p>
+                    <div class="tour-actions">
+                        <button class="detail-btn tour-detail" data-href="daykilimanjaro.html" aria-label="Open Kilimanjaro With Helicopter details">Details</button>
                     </div>
                 </div>
             </article>
@@ -1045,7 +1099,7 @@
 
         <div class="safari-grid" role="list">
             <article class="safari-card" role="listitem" aria-label="2 days Safari">
-                <img class="safari-image" src="img/safari-2days.jpg" alt="2 days safari wildlife" />
+                <img class="safari-image" src="img/48.jpg" alt="2 days safari wildlife" />
                 <div class="safari-body">
                     <h3 class="safari-title">2 days Safari</h3>
                     <p class="safari-desc">Short weekend safari — ideal for limited time visitors. Game drives and lodge stay.</p>
@@ -1056,7 +1110,7 @@
             </article>
 
             <article class="safari-card" role="listitem" aria-label="3 days Safari">
-                <img class="safari-image" src="img/safari-3days.jpg" alt="3 days safari landscape" />
+                <img class="safari-image" src="img/about-1-1.jpg" alt="3 days safari landscape" />
                 <div class="safari-body">
                     <h3 class="safari-title">3 days Safari</h3>
                     <p class="safari-desc">Extended weekend safari with full-day game drives and cultural visit.</p>
@@ -1067,7 +1121,7 @@
             </article>
 
             <article class="safari-card" role="listitem" aria-label="4 days Safari">
-                <img class="safari-image" src="img/safari-4days.jpg" alt="4 days safari open plains" />
+                <img class="safari-image" src="img/banner-img-1-1.jpg" alt="4 days safari open plains" />
                 <div class="safari-body">
                     <h3 class="safari-title">4 days Safari</h3>
                     <p class="safari-desc">Four-day itinerary covering prime parks and game-viewing routes.</p>
@@ -1078,7 +1132,7 @@
             </article>
 
             <article class="safari-card" role="listitem" aria-label="5 days Safari">
-                <img class="safari-image" src="img/safari-5days.jpg" alt="5 days safari wildlife scene" />
+                <img class="safari-image" src="img/banner-img-3-1.jpg" alt="5 days safari wildlife scene" />
                 <div class="safari-body">
                     <h3 class="safari-title">5 days Safari</h3>
                     <p class="safari-desc">Five days of immersive wildlife experience with guided game drives and lodge stays.</p>
@@ -1089,7 +1143,7 @@
             </article>
 
             <article class="safari-card" role="listitem" aria-label="7 days Safari">
-                <img class="safari-image" src="img/safari-7days.jpg" alt="7 days safari scenic view" />
+                <img class="safari-image" src="img/about-2.jpg" alt="7 days safari scenic view" />
                 <div class="safari-body">
                     <h3 class="safari-title">7 days Safari</h3>
                     <p class="safari-desc">Week-long safari for a thorough exploration of multiple parks and landscapes.</p>
@@ -1100,7 +1154,7 @@
             </article>
 
             <article class="safari-card" role="listitem" aria-label="9 days Safari">
-                <img class="safari-image" src="img/safari-9days.jpg" alt="9 days safari river scene" />
+                <img class="safari-image" src="img/Entrance_to_Kilimanjaro_National_Park.jpeg" alt="9 days safari river scene" />
                 <div class="safari-body">
                     <h3 class="safari-title">9 days Safari</h3>
                     <p class="safari-desc">Nine-day premium safari combining major parks, cultural visits and relaxation.</p>
@@ -1111,7 +1165,7 @@
             </article>
 
             <article class="safari-card" role="listitem" aria-label="12 days Safari">
-                <img class="safari-image" src="img/safari-12days.jpg" alt="12 days safari panoramic view" />
+                <img class="safari-image" src="img/tanzania-safari.jpg" alt="12 days safari panoramic view" />
                 <div class="safari-body">
                     <h3 class="safari-title">12 days Safari</h3>
                     <p class="safari-desc">Comprehensive 12-day expedition visiting remote parks and luxury camps.</p>
@@ -1274,33 +1328,33 @@
         <div class="slider-container">
             <div class="slider-wrapper" id="sliderWrapper">
                 <article class="slide">
-                    <img src="img/kilimanjaro.jpg" alt="Mount Kilimanjaro" />
+                    <img src="img/13.jpg" alt="Mount Kilimanjaro" />
                     <div class="slide-overlay">
-                        <h3 class="slide-title">Mount Kilimanjaro</h3>
+                        <h3 class="slide-title">Wilderness Safaris & Tours</h3>
                     </div>
                 </article>
                 <article class="slide">
-                    <img src="img/serengeti.jpg" alt="Serengeti National Park" />
+                    <img src="img/lakechala.jpg" alt="Serengeti National Park" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Lake Chala Day Safari</h3>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="img/screenshot-20230305-203421_orig.jpg" alt="Ngorongoro Crater" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Old Moshi Cultural Tour</h3>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="img/materuni-waterfalls-beautiful.jpg" alt="Zanzibar Beach" />
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Materuni Waterfall Day Trip</h3>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="img/serengeti.jpg" alt="Lake Victoria" />
                     <div class="slide-overlay">
                         <h3 class="slide-title">Serengeti</h3>
-                    </div>
-                </article>
-                <article class="slide">
-                    <img src="img/ngorongoro.jpg" alt="Ngorongoro Crater" />
-                    <div class="slide-overlay">
-                        <h3 class="slide-title">Ngorongoro</h3>
-                    </div>
-                </article>
-                <article class="slide">
-                    <img src="img/zanzibar-beach.jpg" alt="Zanzibar Beach" />
-                    <div class="slide-overlay">
-                        <h3 class="slide-title">Zanzibar</h3>
-                    </div>
-                </article>
-                <article class="slide">
-                    <img src="img/lake-victoria.jpg" alt="Lake Victoria" />
-                    <div class="slide-overlay">
-                        <h3 class="slide-title">Lake Victoria</h3>
                     </div>
                 </article>
             </div>
@@ -1385,7 +1439,7 @@
         }
         </style>
 
-        <h2 class="itinerary-heading">Our Transfer Service</h2>
+        <!-- <h2 class="itinerary-heading">Our Transfer Service</h2> -->
         <section></section>
     <style>
         .transfer-section {
@@ -1461,7 +1515,7 @@
         }
     </style>
 
-    <section class="transfer-section" aria-labelledby="transfer-heading">
+    <!-- <section class="transfer-section" aria-labelledby="transfer-heading">
         <h2 id="transfer-heading">Our Transfer Service</h2>
         <p style="margin-top: 6px; margin-bottom: 14px; color: #444;">Professional transportation solutions for your journey. Book your taxi now!</p>
 
@@ -1493,7 +1547,7 @@
                 <p class="transfer-desc">Convenient transfers between hotels and tour destinations.</p>
                 <button class="transfer-btn book-taxi" data-href="https://askprivatetransfer.travel.blog/2023/05/14/our-transfer-service/" aria-label="Book hotel transfer">Book Your Taxi Now</button>
             </article>
-        </div>
+        </div> -->
 
         <script>
             (function(){
@@ -1508,6 +1562,178 @@
             })();
         </script>
     </section>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/693dd67aa98748197f471813/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/255767691910" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+   
+   <!-- WhatsApp SVG Icon -->
+   <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+     <path d="M19.11 17.2c-.28-.14-1.65-.81-1.9-.9-.26-.09-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.37-.82-.73-1.38-1.63-1.54-1.91-.16-.28-.02-.43.12-.57.12-.12.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.12-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.28-1 1-.99 2.44.01 1.44 1.04 2.83 1.18 3.03.14.19 2.05 3.13 4.98 4.39.7.3 1.25.48 1.68.61.7.22 1.34.19 1.85.12.56-.08 1.65-.67 1.88-1.31.23-.64.23-1.19.16-1.31-.07-.12-.26-.19-.54-.33z"/>
+     <path d="M16 3C8.83 3 3 8.83 3 16c0 2.3.6 4.55 1.74 6.53L3 29l6.67-1.75A12.94 12.94 0 0016 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.5c-2.01 0-3.98-.54-5.7-1.57l-.41-.24-3.96 1.04 1.06-3.86-.27-.42A10.44 10.44 0 0116 5.5c5.79 0 10.5 4.71 10.5 10.5S21.79 26.5 16 26.5z"/>
+   </svg>
+</a>
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  background-color: #25D366;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+</style>
+<section></section>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+        .volunteer-heading {
+            font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            font-weight: 800;
+            font-size: 34px;
+            text-align: center;
+            margin: 36px 0;
+            padding: 8px 12px;
+            background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.4px;
+            position: relative;
+        }
+
+        .volunteer-heading::after {
+            content: "";
+            display: block;
+            width: 96px;
+            height: 6px;
+            margin: 12px auto 0;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+        }
+
+        .volunteer-section {
+            margin: 18px 12px;
+            padding: 18px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(6, 24, 64, 0.03);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #222;
+        }
+
+        .volunteer-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .volunteer-content h2 {
+            margin: 0 0 12px;
+            font-size: 40px;
+            font-weight: 700;
+            color: rgb(25, 25, 25);
+        }
+
+        .volunteer-content p {
+            margin: 0 0 12px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .volunteer-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .volunteer-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: 0;
+            background: #0077b6;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background .2s;
+        }
+
+        .volunteer-btn:hover, .volunteer-btn:focus {
+            background: #005f93;
+            outline: none;
+        }
+
+        @media (max-width: 760px) {
+            .volunteer-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .volunteer-image {
+                height: 240px;
+            }
+            .volunteer-content h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+    <h2 class="volunteer-heading">Volunteer In Tanzania & Empower Communities</h2>
+
+    <section class="volunteer-section" aria-labelledby="volunteer-heading">
+        <div class="volunteer-wrapper">
+            <div class="volunteer-content">
+                <h2 id="volunteer-heading">Join Our Volunteer Program</h2>
+                <p>Make a meaningful difference in Tanzania by volunteering with Foot On Kili. Work alongside local communities, support education initiatives, and contribute to sustainable development projects.</p>
+                <p>Our volunteer programs offer hands-on experience, cultural immersion, and the opportunity to impact lives while exploring the beautiful landscapes of Tanzania.</p>
+                <button class="volunteer-btn volunteer-request" data-href="https://umojavolunteertanzania.weebly.com/" aria-label="Request for Volunteer Program">Request for Volunteer Program</button>
+            </div>
+            <img class="volunteer-image" src="img/voluteerr.jpg" alt="Volunteers working with communities in Tanzania" />
+        </div>
+    </section>
+
+    <script>
+        (function(){
+            const btn = document.querySelector('.volunteer-request');
+            btn.addEventListener('click', function(){
+                const href = this.dataset.href;
+                if (!href) return;
+                window.open(href, '_blank');
+            });
+        })();
+    </script>
     <footer class="site-footer" role="contentinfo" aria-label="Footer">
         <style>
             .site-footer {
@@ -1579,11 +1805,123 @@
                 .footer-bottom { text-align:center; }
             }
         </style>
+        
+
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+    .partners-heading {
+        font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+        font-weight: 800;
+        font-size: 34px;
+        text-align: center;
+        margin: 36px 0;
+        padding: 8px 12px;
+        background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: 0.4px;
+        position: relative;
+    }
+
+    .partners-heading::after {
+        content: "";
+        display: block;
+        width: 96px;
+        height: 6px;
+        margin: 12px auto 0;
+        border-radius: 6px;
+        background: linear-gradient(90deg, #0077b6, #00b4d8);
+        box-shadow: 0 6px 18px rgba(0,118,182,0.12);
+    }
+
+    .partners-section {
+        margin: 18px 12px;
+        padding: 18px;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(6, 24, 64, 0.03);
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        color: #222;
+    }
+
+    .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .partner-item {
+        width: 100%;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: 1px solid #f0f0f0;
+        background: #fafafa;
+        transition: transform .14s, box-shadow .14s;
+        padding: 12px;
+    }
+
+    .partner-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(6, 24, 64, 0.08);
+    }
+
+    .partner-item img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    @media (max-width: 700px) {
+        .partners-heading { font-size: 24px; }
+        .partners-heading::after { width: 72px; height: 5px; }
+        .partners-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; }
+        .partner-item { height: 120px; }
+    }
+</style>
+
+<h2 class="partners-heading">Our Partners</h2>
+
+<section class="partners-section" aria-labelledby="partners-heading">
+    <div class="partners-grid" role="list">
+        <article class="partner-item" role="listitem">
+            <img src="img/partner1.jpg" alt="Partner 1 logo" />
+        </article>
+        <article class="partner-item" role="listitem">
+            <img src="img/partner2.jpg" alt="Partner 2 logo" />
+        </article>
+        <article class="partner-item" role="listitem">
+            <img src="img/partner3.jpg" alt="Partner 3 logo" />
+        </article>
+        <article class="partner-item" role="listitem">
+            <img src="img/Partner4.jpg" alt="Partner 4 logo" />
+        </article>
+        <article class="partner-item" role="listitem">
+            <img src="img/partner6.jpg" alt="Partner 5 logo" />
+        </article>
+        <article class="partner-item" role="listitem">
+            <img src="img/pertner3.jpg" alt="Partner 6 logo" />
+        </article>
+    </div>
+</section>
+
+
 
         <div class="footer-grid">
             <div>
                 <div class="footer-brand" aria-label="Company">
-                    <img src="img/logo-removebg-preview.png" alt="Foot On Kili logo" >
+                    <img src="img/pdflogo.jpg" alt="Foot On Kili logo" >
                     <div>
                         <strong>Foot On Kili Tanzania Adventure & Safari</strong>
                         <div style="font-size:0.95rem;color:white;margin-top:6px;">Tanzania Adventure &amp; Safari</div>
@@ -1637,6 +1975,14 @@
                 <p>Email: <a href="mailto:info@footonkilitanzaniaadventure.com">info@footonkilitanzaniaadventure.com</a></p>
                 <div style="margin-top:10px;color:white;font-size:0.95rem;"></div>
             </div>
+        </div>
+        <div style="margin-top: 18px; padding: 18px; background: rgb(25, 25, 25); border-radius: 8px; text-align: center;">
+            <p style="margin: 0 0 12px; color: #f9f9f9; font-weight: 600;">Review us on TripAdvisor</p>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g317084-d33749788-Reviews-Foot_On_Kili_Tanzania_Adventure-Moshi_Kilimanjaro_Region.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="img/tripad.png" alt="TripAdvisor logo" style="height: 40px; width: auto;"><br><br>
+                <button class="transfer-btn book-taxi" data-href="https://www.tripadvisor.com/Attraction_Review-g317084-d33749788-Reviews-Foot_On_Kili_Tanzania_Adventure-Moshi_Kilimanjaro_Region.html" aria-label="Book airport transfer">Review Us Now</button>
+                <span style="color: #0077b6; font-weight: 600;"></span>
+            </a>
         </div>
 
         <div class="footer-bottom">
